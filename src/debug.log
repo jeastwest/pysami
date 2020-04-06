@@ -1,0 +1,1058 @@
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api
+Not Found: /sources
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 36, in sources
+    serializer = WorkflowSerializer(sources, many=True)
+NameError: name 'WorkflowSerializer' is not defined
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 37, in sources
+    return Response(serializer.data)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    for field in fields:
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 375, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1062, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1208, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1323, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `Latitude, Longitude, Description, Intensity, Dispersion, Name` is not valid for model `Source`.
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 37, in sources
+    return Response(serializer.data)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    for field in fields:
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 375, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1062, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1208, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1323, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `Latitude, Longitude, Description, Intensity, Dispersion, Name` is not valid for model `Source`.
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 37, in sources
+    return Response(serializer.data)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    for field in fields:
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 375, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1062, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1208, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1323, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `Latitude, Longitude, Description, Intensity, Dispersion, Name` is not valid for model `Source`.
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Not Found: /api
+Not Found: /api
+Not Found: /api
+Not Found: /api
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Bad Request: /sources/
+Bad Request: /api/sources/
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /favicon.ico
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Method Not Allowed: /
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api/users/authenticate/
+Not Found: /api/users/authenticate
+Bad Request: /sources/
+Bad Request: /sources/
+Bad Request: /sources/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Bad Request: /sources/
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Bad Request: /sources/
+Bad Request: /sources/
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Not Found: /api/4444sources
+Not Found: /api/4444sources
+Not Found: /api
+Not Found: /api
+Not Found: /api/user
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Bad Request: /api/sources/
+Bad Request: /sources/
+Bad Request: /api/sources/
+Not Found: /api/users/authenticate/
+Not Found: /api/users/authenticate/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/authenticate/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/authenticate/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Unauthorized: /api/users/
+Not Found: /api/users/authenticate/
+Not Found: /accounts
+Not Found: /login
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/login/
+Not Found: /api/users/login/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/login/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/login/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api/users/authenticate
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api/users/login
+Unauthorized: /auth/users/
+Not Found: /authenticate
+Internal Server Error: /auth
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /api/users/auth/
+Not Found: /api/users/auth/
+Not Found: /api/users/auth/
+Not Found: /api/users/auth/
+Not Found: /api/users/auth/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Unauthorized: /auth/users/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Bad Request: /auth/users/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Unauthorized: /auth/users/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/
+Unauthorized: /auth/users/
+Unauthorized: /auth/users/auth/
+Not Found: /auth/users/auth/auth
+Unauthorized: /auth/users/auth/
+Unauthorized: /auth/users/authenticate/
+Not Found: /api/users/authenticate/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api/users/auth
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Unauthorized: /auth/users/
+Unauthorized: /auth/users/authenticate/
+Not Found: /api/users/authenticate/
+Not Found: /api/auth
+Not Found: /api/authenticate
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/authenticate/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/jeastman1/
+Not Found: /api/users/jeastman1/
+Not Found: /api/users/auth/
+Not Found: /api/users/auth/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /accounts
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/username=jeastman1/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/auth/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Not Found: /api/users/auth/
+Not Found: /api/users/auth/
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Not Found: /api/users/auth/
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Not Found: /api/users/auth/
+Not Found: /api/users/login/
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 18, in login
+    username = request.POST['username']
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+Not Found: /api/users/login/
+Not Found: /api/users/login/
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 18, in login
+    username = request.POST['username']
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 18, in login
+    username = request.POST['username']
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 76, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 18, in login
+    username = request.POST['username']
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/datastructures.py", line 78, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api/login/
+Not Found: /api/authenticate/
+Method Not Allowed: /auth/
+Method Not Allowed: /auth/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /auth/authenticate
+Bad Request: /sources/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Unauthorized: /auth/
+Unauthorized: /auth/
+Bad Request: /sources/
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Internal Server Error: /sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    for field in fields:
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 375, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1038, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/rest_framework/serializers.py", line 1110, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the SourceSerializer serializer.",)
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Bad Request: /sources/
+Method Not Allowed: /auth/
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Method Not Allowed: /auth/
+Method Not Allowed: /auth/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Method Not Allowed: /auth/
+Method Not Allowed: /auth/
+Internal Server Error: /auth
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /auth
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /auth
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Method Not Allowed: /
+Method Not Allowed: /
+Method Not Allowed: /
+Not Found: /api
+Unauthorized: /auth/users/
+Not Found: /api/auth
+Not Found: /auth/djoser.urls
+Not Found: /auth/djoser
+Method Not Allowed: /auth/
+Not Found: /auth/jeastman1
+Internal Server Error: /users/jeastman1
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/users/jeastman1/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /auth/authorize
+Not Found: /auth/authenticate/
+Not Found: /auth/register/
+Not Found: /api/users/authenticate/
+Not Found: /api/users/register/
+Unauthorized: /auth/users/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Internal Server Error: /auth/users/username=jeastman1&password=mech4engineer7
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/users/username%3Djeastman1&password%3Dmech4engineer7/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Unauthorized: /auth/users/
+Bad Request: /auth/users/
+Internal Server Error: /auth/users/authenticate
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/users/authenticate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Not Found: /auth/users/authenticate/[object Object]
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Not Found: /auth/users//cool[object Object]
+Not Found: /auth/users//cool[object Object]
+Not Found: /auth/users//cool[object Object]
+Not Found: /auth/users//cool[object Object]
+Not Found: /auth/users//cool[object Object]
+Not Found: /auth/users//cool[object Object]
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Not Found: /auth/users//cool[object Object]
+Not Found: /auth/users//authenticate[object Object]
+Not Found: /auth/users//authenticate[object Object]
+Not Found: /auth/users/authenticate/[object Object]
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /favicon.ico
+Not Found: /api/auth/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Unauthorized: /auth/users/
+Not Found: /locations
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Unauthorized: /auth/users/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /users/register/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api/
+Successfully imported extension module "markdown.extensions.toc".
+Successfully loaded extension "markdown.extensions.toc.TocExtension".
+Not Found: /api/users/authenticate/
+Not Found: /api/users/authenticate/
+Not Found: /api/users/authenticate/
+Not Found: /api/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Not Found: /eeeee/users/authenticate/
+Bad Request: /auth/users/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Not Found: /auth/users/authenticate/[object Object]
+Not Found: /auth/users/authenticate/[object Object]
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Hello world
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Not Found: /auth/users/authenticate/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Not Found: /api/users/authenticate/
+Not Found: /api/users/authauthenticate/
+Not Found: /api/users/authauthenticate/
+Not Found: /api/users/authauthenticate/
+Not Found: /api/users/authauthenticate/
+Not Found: /api/users/authauthenticate/
+Not Found: /api/users/auth/authenticate/
+Not Found: /api/auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Internal Server Error: /auth/users/authenticate
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/users/authenticate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Unauthorized: /auth/users/authenticate/
+Not Found: /auth/users/authenticate/jeastman1
+Not Found: /login/
+Internal Server Error: /auth/users/login
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/users/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Unauthorized: /auth/users/login/
+Not Found: /login
+Unauthorized: /auth/users/
+Not Found: /api
+Not Found: /api/auth
+Not Found: /api/auth
+Not Found: /api/users/auth
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/
+Unauthorized: /auth/users/login/
+Internal Server Error: /auth/users/login
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/users/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /auth/users/authenticate
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/users/authenticate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /auth/authenticate
+Not Found: /auth/authenticate
+Method Not Allowed: /auth/
+Internal Server Error: /users/auth
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/users/auth/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Internal Server Error: /users/auth
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/users/auth/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Not Found: /login/
+Not Found: /auth/usersauthenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Not Found: /users/auth/authenticate
+Internal Server Error: /auth/users/authenticate
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/Users/jceastman1/opt/anaconda3/envs/samiapp/lib/python3.8/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/auth/users/authenticate/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Bad Request: /auth/users/
+Unauthorized: /auth/users/login/
+Unauthorized: /auth/users/login/
+Unauthorized: /auth/users/login/
+Unauthorized: /auth/users/login/
+Unauthorized: /auth/users/login/
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Bad Request: /auth/users/
+Unauthorized: /auth/users/login/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Method Not Allowed: /users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Unauthorized: /auth/users/register/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Hello world
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Not Found: /api/users/authenticate/
+Unauthorized: /auth/users/authenticate/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
