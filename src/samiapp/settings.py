@@ -41,11 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-    'djoser',
-    'corsheaders',
-
-    # Own Apps
     'locations',
+    'corsheaders',
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -162,4 +160,8 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7)
+}
+
+DJOSER = {
+    'SEND_ACTIVATION_EMAIL': False,
 }

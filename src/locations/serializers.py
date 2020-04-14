@@ -24,4 +24,4 @@ class GroupSerializer(serializers.ModelSerializer):
 class SourceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Source
-        fields = ['Latitude', 'Longitude', 'Description', 'Intensity', 'Dispersion', 'Name']
+        fields = ['added_by', 'Latitude', 'Longitude', 'Description', 'Intensity', 'Dispersion', 'Name']
