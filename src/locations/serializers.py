@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group, Permission
-from .models import Source
+from .models import Map, Source
 from rest_framework import serializers
 
 
@@ -20,8 +20,12 @@ class GroupSerializer(serializers.ModelSerializer):
         model = Group
         fields = ['url', 'name']
 
+class MapSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Map
+        fields = ['pk', 'Name', 'City']
 
 class SourceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Source
-        fields = ['added_by', 'Latitude', 'Longitude', 'Description', 'Intensity', 'Dispersion', 'Name']
+        fields = ['Map', 'Latitude', 'Longitude', 'Description', 'Intensity', 'Dispersion', 'Name']

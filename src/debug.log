@@ -14800,3 +14800,2722 @@ Unauthorized: /auth/users/me/
 Unauthorized: /auth/users/me/
 Using selector: KqueueSelector
 Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /admin/locations/source/add/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'locations'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 607, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 231, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1638, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1522, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 807, in log_addition
+    object_repr=str(object),
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/models.py", line 29, in __str__
+    return reverse("locations:sources", kwargs={"Map":self.Map})
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'locations' is not a registered namespace
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /admin/locations/source/add/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 607, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/sites.py", line 231, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1638, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1522, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 1569, in _changeform_view
+    self.log_addition(request, new_object, change_message)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/options.py", line 807, in log_addition
+    object_repr=str(object),
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/models.py", line 29, in __str__
+    return reverse("sources", kwargs={"Map":self.Map})
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'sources' with keyword arguments '{'Map': <Map: Map 1>}' not found. 1 pattern(s) tried: ['api/sources/(?P<Map>[0-9]+)/$']
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /admin/locations/source/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/options.py", line 581, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 262, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 293, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/options.py", line 583, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Source has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/base.py", line 33, in render
+    return super().render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/library.py", line 214, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 342, in result_list
+    'results': list(results(cl)),
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 318, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 309, in __init__
+    super().__init__(*items)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 232, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 275, in lookup_field
+    value = attr()
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/models.py", line 29, in __str__
+    return reverse("sources", kwargs={"Map":self.Map})
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'sources' with keyword arguments '{'Map': <Map: Map 1>}' not found. 1 pattern(s) tried: ['api/sources/(?P<Map>[0-9]+)/$']
+Internal Server Error: /admin/locations/source/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/options.py", line 581, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 262, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 293, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/options.py", line 583, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Source has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/base.py", line 33, in render
+    return super().render(context)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/template/library.py", line 214, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 342, in result_list
+    'results': list(results(cl)),
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 318, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 309, in __init__
+    super().__init__(*items)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/templatetags/admin_list.py", line 232, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/admin/utils.py", line 275, in lookup_field
+    value = attr()
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/models.py", line 29, in __str__
+    return reverse("sources", kwargs={"Map":self.Map})
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'sources' with keyword arguments '{'Map': <Map: Map 1>}' not found. 1 pattern(s) tried: ['api/sources/(?P<Map>[0-9]+)/$']
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /api/sources/2/
+Not Found: /api/sources/1/
+Not Found: /api/sources/
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /api/sources/
+Not Found: /api/sources/
+Not Found: /api/sources/
+Not Found: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+NameError: name 'Map' is not defined
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+NameError: name 'Map' is not defined
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+NameError: name 'Map' is not defined
+Not Found: /favicon.ico
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+NameError: name 'Map' is not defined
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+NameError: name 'Map' is not defined
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+NameError: name 'Map' is not defined
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1250, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1087, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1483, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Added_by' into field. Choices are: City, Name, Study_area, id, source
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1250, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1087, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1483, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Added_by' into field. Choices are: City, Name, Study_area, id, source
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1250, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1087, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1483, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Added_by' into field. Choices are: City, Name, Study_area, id, source
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1250, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1087, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1483, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Added_by' into field. Choices are: City, Name, Study_area, id, source
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1250, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1087, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1483, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Added_by' into field. Choices are: City, Name, Study_area, id, source
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1250, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1087, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1483, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Added_by' into field. Choices are: City, Name, Study_area, id, source
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1250, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1087, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1483, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'Added_by' into field. Choices are: City, Name, Study_area, id, source
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10f9d8e50>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10fae3490>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10fb1c490>.
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10690a090>.
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x1109ad110>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x1109b5f50>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x1109cd090>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x110a94e50>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x110aae150>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x110cccc50>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x110cccfd0>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x1109a4710>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x110ccca10>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x1109ed4d0>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x110e08390>.
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x110d439d0>.
+/Users/jceastman1/Documents/work/sami-server/src/locations/models.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 40, in maps
+    return Response(serializer.data)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 678, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 514, in to_representation
+    for field in fields:
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 375, in _readable_fields
+    for field in self.fields.values():
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 1063, in get_fields
+    source, info, model, depth
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 1208, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/serializers.py", line 1325, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `Study_area` is not valid for model `Map`.
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /api/maps/1
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/sources/22/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 59, in sources
+    sources = Source.objects.filter(Added_by=user, Map_id=pk)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10c85b5d0>.
+Internal Server Error: /api/sources/2/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 59, in sources
+    sources = Source.objects.filter(Added_by=user, Map_id=pk)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10c884390>.
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/
+Not Found: /api/sources/
+Not Found: /api/sources/
+Not Found: /api/sources/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /favicon.ico
+Not Found: /api/sources/
+Not Found: /api/sources/
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/[object Object]
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/jwt/create/
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Not Found: /api/sources/[object Object]
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/2
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/2
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/2
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/2
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/2
+Not Found: /api/sources/2
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /api/sources/2
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/2
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/1/
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /api/sources/2/
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: sources() missing 1 required positional argument: 'pk'
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: sources() missing 1 required positional argument: 'Map'
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: sources() missing 1 required positional argument: 'Map'
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: sources() missing 1 required positional argument: 'Map'
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Internal Server Error: /api/sources/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+TypeError: sources() missing 1 required positional argument: 'pk'
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/sources/
+Unauthorized: /api/sources/
+Unauthorized: /api/sources/
+Unauthorized: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/jwt/create/
+Unauthorized: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/jwt/create/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/jwt/create/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/
+Unauthorized: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/
+Unauthorized: /api/sources/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Not Found: /api/sources/1/
+/Users/jceastman1/Documents/work/sami-server/src/locations/urls.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/
+Not Found: /api/sources/
+Not Found: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /api/sources/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 46, in maps
+    source.save()
+NameError: name 'source' is not defined
+Not Found: /api/sources/
+Bad Request: /api/sources/3/
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 46, in maps
+    source.save()
+NameError: name 'source' is not defined
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 46, in maps
+    source.save()
+NameError: name 'source' is not defined
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/8/
+Unauthorized: /api/sources/6/
+Unauthorized: /auth/jwt/create/
+Watching for file changes with StatReloader
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Internal Server Error: /api/maps/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 38, in maps
+    maps = Map.objects.filter(Added_by=user)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10bc7d1d0>.
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Not Found: /me
+Not Found: /api/sources/
+Internal Server Error: /api/sources/2/
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1772, in get_prep_value
+    return int(value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/contrib/auth/models.py", line 415, in __int__
+    raise TypeError('Cannot cast AnonymousUser to int. Are you trying to use it in place of User?')
+TypeError: Cannot cast AnonymousUser to int. Are you trying to use it in place of User?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/Users/jceastman1/Documents/work/sami-server/src/locations/api.py", line 59, in sources
+    sources = Source.objects.filter(Added_by=user, Map=pk)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/related_lookups.py", line 115, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "/Users/jceastman1/opt/anaconda3/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1776, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <django.contrib.auth.models.AnonymousUser object at 0x10bc74f50>.
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/locations/api.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/sources/2/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/sources/2/
+Unauthorized: /api/sources/2/
+Unauthorized: /api/sources/2/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/5/
+Unauthorized: /api/sources/6/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/6/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/5/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/2/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/jwt/create/
+Unauthorized: /auth/jwt/create/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/1/
+Unauthorized: /api/sources/2/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/2/
+Unauthorized: /api/sources/1/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/6/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/6/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/1/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/1/
+Unauthorized: /api/sources/2/
+Unauthorized: /api/sources/1/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/1/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/8/
+/Users/jceastman1/Documents/work/sami-server/src/samiapp/settings.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+/Users/jceastman1/Documents/work/sami-server/src/locations/serializers.py changed, reloading.
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/jwt/create/
+Unauthorized: /api/maps/
+Unauthorized: /api/maps/
+Unauthorized: /api/maps/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/2/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/jwt/create/
+Unauthorized: /api/sources/6/
+Unauthorized: /api/sources/6/
+Unauthorized: /api/sources/6/
+Unauthorized: /api/sources/6/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Unauthorized: /api/sources/6/
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Using selector: KqueueSelector
+Using selector: KqueueSelector
+Watching for file changes with StatReloader
+Unauthorized: /auth/users/me/
+Unauthorized: /auth/users/me/
+Using selector: KqueueSelector
+Using selector: KqueueSelector
