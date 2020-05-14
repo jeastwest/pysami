@@ -8,9 +8,11 @@ This branch includes the sami-mgr Angular front end
 
 ### Requirements
 
-**_Git https://git-scm.com
-Python v3.8+ https://www.python.org and/or Anaconda https://www.anaconda.com
-node.js https://nodejs.org_**
+#### **_Git https://git-scm.com_**
+
+#### **_Python v3.8+ https://www.python.org and/or Anaconda https://www.anaconda.com_**
+
+#### **_node.js https://nodejs.org_**
 
 ### Development Setup
 
@@ -24,7 +26,8 @@ A fairly efficient development setup is as follows:
 
 - Activate the environment:
 
-  > `(base) C:\Users\user>conda activate sami` > `(sami) C:\Users\user>`
+  > `(base) C:\Users\user>conda activate sami`
+  > `(sami) C:\Users\user>`
 
 - Make a workspace folder:
 
@@ -68,7 +71,7 @@ At this point all requirements should be installed
   built files within
   > `(sami) ..\sami-mgr>npx ng build --prod --output-path C:\Users\user\ws-sami\pysami\src\static --watch --output-hashing none`
 
--- the npx command tells node to use the angular installed in the node_modules folder instead of a global one
+The npx command tells node to use the angular installed in the node_modules folder instead of a global one
 -- ng build is the standard angular build command
 -- --prod instructs the compiler to build a production version of the Angular app
 -- --output-path tells the compiler where to save the built files
