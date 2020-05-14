@@ -8,7 +8,7 @@ class Map(models.Model):
 	Added_by	=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 	Name		=models.TextField()
 	City		=models.TextField()
-	Study_area	=models.TextField()
+	Study_area	=models.TextField(default="")
 
 	def __str__(self):
 		return f'{self.Name}'
