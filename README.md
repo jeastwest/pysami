@@ -104,7 +104,7 @@ but this method can be slow, build time being the restriction.
 
 An addition to this setup that can speed up iterations of the front end is by starting another terminal (I use the one in vscode for this)
 
-and starting an additional angular development server there.
+and starting an angular development server there.
 
 > `C:\Users\user>cd ws-sami\pysami\src\sami_angular\sami-mgr>npx ng serve`
 
