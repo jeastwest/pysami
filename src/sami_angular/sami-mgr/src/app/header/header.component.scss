@@ -1,0 +1,121 @@
+// @media only screen and (max-width: 725px) {
+//   #user-tag {
+//     display:none;
+//   }
+// }
+
+#header {
+  position: relative;
+  color: whitesmoke;
+  background: linear-gradient(#002137, #197ec0);
+  display: inline-grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: auto;
+  padding: 0.5em;
+  padding-bottom: 4em;
+}
+
+
+#app-name {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  font-size: 36px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+}
+
+#version-number {
+  font-size: 9px;
+  display:inline-block;
+}
+
+.name {
+  line-height: 1em;
+}
+
+.bold-yellow {
+  font-weight: bold;
+  font-size: 42px;
+  color: yellow;
+}
+
+.app-controls {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding: auto;
+  padding-left: 1.5em;
+}
+
+.control {
+  box-sizing: content-box;
+  display: inline-block;
+  position: relative;
+  width: 15%;
+  margin: 0;
+  padding: 0.25em;
+  text-align: center;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: white;
+  border-radius: 3px;
+}
+
+.control::before {
+  color: yellow;
+  box-sizing: content-box;
+}
+
+.control:hover {
+  background-color: mediumaquamarine;
+  cursor: pointer;
+}
+
+#control-about {
+  content: '\f007';
+}
+
+#control-sources {
+  content: '\f0ca';
+}
+
+#control-io {
+  content: '\f0c7';
+}
+
+nav {
+    float:right;
+  
+    ul{
+        
+        list-style-type: none;
+        margin:0;
+        display: flex;
+        
+
+        li a {
+            color:white;
+            text-decoration: none;
+            padding: 1em;
+
+            &:hover {
+                background: darken( mediumaquamarine, 10%)
+            }
+        }
+    }
+}
+
+
+#user-tag {
+  position: absolute;
+  left: 70%;
+  bottom: 5em;
+  background-color: black;
+  text-align: center;
+  border-radius: .25em;
+  padding: .25em;
+}

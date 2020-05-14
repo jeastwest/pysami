@@ -1,0 +1,44 @@
+<mat-drawer-container class="map-container" autosize>
+
+    <mat-drawer class="side-nav" #drawer mode="side">
+        <mat-nav-list>
+            <a mat-list-item (click)="showSettings = !showSettings">Settings</a>
+            <p *ngIf="showSettings">
+                <app-settings></app-settings>
+            </p>
+            <a mat-list-item (click)="showTable = !showTable">Table</a>
+            <p *ngIf="showTable">
+                <app-table></app-table>
+            </p>
+            <a mat-list-item (click)="showChart = !showChart">Plot</a>
+            <p *ngIf="showChart">
+                <app-chart></app-chart>
+            </p>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content class="map-content">
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <h1 class="example-app-name">
+                Source Interface</h1>
+        </mat-toolbar>
+        <div class="map-frame">
+
+            <div id="map"></div>
+
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
+
+
+
+
+
+<ng-container class="form" *ngIf="addingSource">
+    <app-form></app-form>
+</ng-container>

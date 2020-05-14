@@ -136,3 +136,6 @@ db.sqlite3
 
 .vscode/
 .idea
+
+static/
+sami_angular/sami-mgr/node_modules/

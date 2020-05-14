@@ -1,0 +1,85 @@
+h1{
+    text-align: center;
+}
+
+mat-tab-group {
+    margin-bottom: 20em;
+}
+
+@media only screen and (max-width: 600px) {
+    .expandedButton{
+      display: none;
+    }
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li { 
+        border-radius: .5em;
+        background: whitesmoke;
+        padding: 1em;
+        margin-right: 10px;
+        width: 26%;
+        height: 200px;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        display: flex;
+        flex-direction: column;
+
+        &:hover{
+            background-color:darken(whitesmoke, 10%);
+          } 
+
+        p {
+            margin:0;
+        }
+
+        p.name{
+            font-weight:bold;
+            font-size: 1.2rem;
+        }
+
+        p.studyarea{
+            font-weight:bold;
+            font-size: 1.2rem;
+        }
+
+
+        p.city {
+            text-transform: uppercase;
+            font-size: .9rem;
+            flex-grow:1;
+        }
+      
+    }
+    .adding-map {
+        position: relative;
+        left: 0;
+
+        background: rgb(238,238,238);
+        padding: 1.5em;
+        margin-top: 3em;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        button {
+            background-color: blue;
+            padding-left: auto;
+            padding-right:auto;
+            &:hover{
+                background-color:darken(blue, 10%);
+              } 
+
+        }
+    
+    } 
+  
+}
