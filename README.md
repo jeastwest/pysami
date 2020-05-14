@@ -27,6 +27,7 @@ A fairly efficient development setup is as follows:
 - Activate the environment:
 
   > `(base) C:\Users\user>conda activate sami`
+
   > `(sami) C:\Users\user>`
 
 - Make a workspace folder:
@@ -62,13 +63,17 @@ A fairly efficient development setup is as follows:
   > `(sami) ..\sami-mgr>cd ../sami_angular/sami-mgr`
 
 - Install the angular dependencies:
+
   > `(sami) ..\sami-mgr>npm install`
 
 At this point all requirements should be installed
 
 - In order for pysami (Django) to be able to serve the angular files they need to be built first
+
   The following command will build the angular files, create the src/static folder, and save the
+
   built files within
+
   > `(sami) ..\sami-mgr>npx ng build --prod --output-path C:\Users\user\ws-sami\pysami\src\static --watch --output-hashing none`
 
 The npx command tells node to use the angular installed in the node_modules folder instead of a global one
