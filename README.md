@@ -88,7 +88,9 @@ The npx command tells node to use the angular installed in the node_modules fold
 
 - Open another anaconda cli instance, activate the environment you created earlier, and navigate to the pysami project src folder:
 
-> `(base) C:\Users\user>conda activate sami` > `(sami) C:\Users\user>cd ws-sami/pysami/src`
+> `(base) C:\Users\user>conda activate sami`
+
+> `(sami) C:\Users\user>cd ws-sami/pysami/src`
 
 - Start the Django app:
 
