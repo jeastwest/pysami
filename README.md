@@ -50,21 +50,21 @@ A fairly efficient development setup is as follows:
 
   > `(sami) ..\ws-sami\pysami>git checkout sami-ng-included-in-pysami`
 
-- Cd into the src folder:
+- `cd` into the src folder:
 
   > `(sami) ..\ws-sami\pysami>cd src`
 
-- Install the python dependencies:
+- Install the python dependencies (this might take a while):
 
   > `(sami) ..\ws-sami\pysami\src>pip install -r requirements.txt`
 
-- Cd into the sami_angular/sami-mgr folder:
+- `cd` into the sami_angular/sami-mgr folder:
 
-  > `(sami) ..\sami-mgr>cd ../sami_angular/sami-mgr`
+  > `(sami) \ws-sami\pysami\src>cd ../sami_angular/sami-mgr`
 
-- Install the angular dependencies:
+- Install the angular dependencies (this also might take a while):
 
-  > `(sami) ..\sami-mgr>npm install`
+  > `(sami) ..\sami_angular\sami-mgr>npm install`
 
 At this point all requirements should be installed
 
@@ -77,28 +77,34 @@ At this point all requirements should be installed
   > `(sami) ..\sami-mgr>npx ng build --prod --output-path C:\Users\user\ws-sami\pysami\src\static --watch --output-hashing none`
 
 The npx command tells node to use the angular installed in the node_modules folder instead of a global one
--- ng build is the standard angular build command
--- --prod instructs the compiler to build a production version of the Angular app
--- --output-path tells the compiler where to save the built files
--- --watch starts a file monitor which reruns this build command if any of the source files change, basically hot-reloading
--- --output-hashing none instructs the compiler not to append the file names with the file's hash
 
--- Building the Angular files this way leaves this anaconda cli instance blocking as a log for the file monitor
+- `ng build` is the standard angular build command
+- `--prod` instructs the compiler to build a production version of the Angular app
+- `--output-path` tells the compiler where to save the built files
+- `--watch` starts a file monitor which reruns this build command if any of the source files change, basically hot-reloading
+- `--output-hashing none` instructs the compiler not to append the file names with the file's hash
 
--- Open another anaconda cli instance, activate the environment you created earlier, and navigate to the pysami project src folder:
--- (base) C:\Users\user>conda activate sami
--- (sami) C:\Users\user>cd ws-sami/pysami/src
+- Building the Angular files this way leaves this anaconda cli instance blocking as a log for the file monitor
 
--- Start the Django app:
--- (sami) C:\Users\user\ws-sami\pysami\src>python manage.py runserver
+- Open another anaconda cli instance, activate the environment you created earlier, and navigate to the pysami project src folder:
 
--- You can now navigate a browser to localhost:8000
+> `(base) C:\Users\user>conda activate sami` > `(sami) C:\Users\user>cd ws-sami/pysami/src`
 
--- Note: If you have followed this set up procedure, you have a good way to easily test iterations of the Angular components of this app,
--- but this method can be slow, build time being the restriction.
--- An addition to this setup that can speed up iterations of the front end is by starting another terminal (I use the one in vscode for this)
--- and starting an additional angular development server there.
--- C:\Users\user>cd ws-sami\pysami\src\sami_angular\sami-mgr>npx ng serve
+- Start the Django app:
 
--- This will start the Angular development server on port 4200, which is much faster to iterate with.
--- You can now navigate a browser to localhost:4200
+> `(sami) C:\Users\user\ws-sami\pysami\src>python manage.py runserver`
+
+- You can now navigate a browser to `localhost:8000`
+
+- Note: If you have followed this set up procedure, you have a good way to easily test iterations of the Angular components of this app,
+
+but this method can be slow, build time being the restriction.
+
+An addition to this setup that can speed up iterations of the front end is by starting another terminal (I use the one in vscode for this)
+
+and starting an additional angular development server there.
+
+> `C:\Users\user>cd ws-sami\pysami\src\sami_angular\sami-mgr>npx ng serve`
+
+- This will start the Angular development server on port 4200, which is much faster to iterate with.
+- You can now navigate a browser to `localhost:4200`
