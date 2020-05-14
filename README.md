@@ -1,4 +1,4 @@
-# pysami
+# **pysami**
 
 Django backend for sami web tool
 
@@ -8,56 +8,65 @@ This branch includes the sami-mgr Angular front end
 
 ### Requirements
 
-Git https://git-scm.com
+**_Git https://git-scm.com
 Python v3.8+ https://www.python.org and/or Anaconda https://www.anaconda.com
-node.js https://nodejs.org
+node.js https://nodejs.org_**
 
 ### Development Setup
 
-- A fairly efficient development setup is as follows:
+A fairly efficient development setup is as follows:
 
--- Open an Anaconda cli instance
+- Open an Anaconda cli instance
 
--- Create an environment
--- (base) C:\Users\user>conda create env -n sami django
+- Create an environment
 
--- Activate the environment:
--- (base) C:\Users\user>conda activate sami
--- (sami) C:\Users\user>
+  > `(base) C:\Users\user>conda create env -n sami django`
 
--- Make a workspace folder:
--- (sami) C:\Users\user>mkdir ws-sami
+- Activate the environment:
 
--- Cd into the workspace:
--- (sami) C:\Users\user>cd ws-sami
+  > `(base) C:\Users\user>conda activate sami` > `(sami) C:\Users\user>`
 
--- Clone the repo:
--- (sami) ..\ws-sami>git clone https://www.github.com/jeastwest/pysami.git
+- Make a workspace folder:
 
--- Cd into the project:
--- (sami) C:\Users\user\ws-sami>cd pysami
+  > `(sami) C:\Users\user>mkdir ws-sami`
 
--- Checkout the sami-ng-included-in-pysami branch
--- (sami) ..\ws-sami\pysami>git checkout sami-ng-included-in-pysami
+- `cd` into the workspace:
 
--- Cd into the src folder:
--- (sami) ..\ws-sami\pysami>cd src
+  > `(sami) C:\Users\user>cd ws-sami`
 
--- Install the python dependencies:
--- (sami) ..\ws-sami\pysami\src>pip install -r requirements.txt
+- Clone the repo:
 
--- Cd into the sami_angular/sami-mgr folder:
--- (sami) ..\sami-mgr>cd ../sami_angular/sami-mgr
+  > `(sami) ..\ws-sami>git clone https://www.github.com/jeastwest/pysami.git`
 
--- Install the angular dependencies:
--- (sami) ..\sami-mgr>npm install
+- `cd` into the project:
 
--- At this point all requirements should be installed
+  > `(sami) C:\Users\user\ws-sami>cd pysami`
 
--- In order for pysami (Django) to be able to serve the angular files they need to be built first
--- The following command will build the angular files, create the src/static folder, and save the
--- built files within
--- (sami) ..\sami-mgr>npx ng build --prod --output-path C:\Users\user\ws-sami\pysami\src\static --watch --output-hashing none
+- Checkout the sami-ng-included-in-pysami branch
+
+  > `(sami) ..\ws-sami\pysami>git checkout sami-ng-included-in-pysami`
+
+- Cd into the src folder:
+
+  > `(sami) ..\ws-sami\pysami>cd src`
+
+- Install the python dependencies:
+
+  > `(sami) ..\ws-sami\pysami\src>pip install -r requirements.txt`
+
+- Cd into the sami_angular/sami-mgr folder:
+
+  > `(sami) ..\sami-mgr>cd ../sami_angular/sami-mgr`
+
+- Install the angular dependencies:
+  > `(sami) ..\sami-mgr>npm install`
+
+At this point all requirements should be installed
+
+- In order for pysami (Django) to be able to serve the angular files they need to be built first
+  The following command will build the angular files, create the src/static folder, and save the
+  built files within
+  > `(sami) ..\sami-mgr>npx ng build --prod --output-path C:\Users\user\ws-sami\pysami\src\static --watch --output-hashing none`
 
 -- the npx command tells node to use the angular installed in the node_modules folder instead of a global one
 -- ng build is the standard angular build command
