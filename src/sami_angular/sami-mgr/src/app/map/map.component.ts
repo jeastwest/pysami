@@ -80,7 +80,6 @@ export class MapComponent implements AfterViewInit {
 
   }
   addSource(): any {
-    alert("this works")
     this.addingSource = true
   }
 
