@@ -16,7 +16,7 @@ This branch includes the sami-mgr Angular front end
 
 ### Development Setup
 
-A fairly efficient development setup is as follows:
+A fairly efficient development setup for a Windows machine is as follows:
 
 - Open an Anaconda cli instance
 
