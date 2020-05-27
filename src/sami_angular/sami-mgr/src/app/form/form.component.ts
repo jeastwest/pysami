@@ -48,7 +48,7 @@ export class FormComponent {
 
   quitForm(): any {
     this.mapComponent.addingSource = false;
-    alert("quitting")
+
   }
 
   openSnackBar(message: string, action: string) {
