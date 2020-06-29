@@ -140,7 +140,7 @@ export class UtilityService {
         "Content-Type": "application/json",
       }),
     };
-    return this.http.get<any>(environment.apiUrl + "maps/", options).pipe(
+    return this.http.get<any>(environment.apiUrl + "api/maps/", options).pipe(
       timeout(5000),
       tap((myMaps) => {
         if (myMaps) {
@@ -169,7 +169,7 @@ export class UtilityService {
       Study_area,
     };
     return this.http
-      .post<any>(environment.apiUrl + "maps/", newMap, options)
+      .post<any>(environment.apiUrl + "api/maps/", newMap, options)
       .pipe(
         // timeout(10000),
         catchError((err) => {
@@ -186,7 +186,7 @@ export class UtilityService {
       }),
     };
     return this.http
-      .get<any>(environment.apiUrl + "sources/" + map_id + "/", options)
+      .get<any>(environment.apiUrl + "api/sources/" + map_id + "/", options)
       .pipe(
         // timeout(5000),
         tap((response) => {
@@ -239,7 +239,7 @@ export class UtilityService {
       Name,
     };
     return this.http
-      .post(environment.apiUrl + "sources/" + Map + "/", newSource, options)
+      .post(environment.apiUrl + "api/sources/" + Map + "/", newSource, options)
       .pipe(
         timeout(5000),
         tap((response: any) => {

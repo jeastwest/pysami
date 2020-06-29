@@ -1,49 +1,50 @@
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
-import { AuthService } from '../../services/auth.service';
-import { MapService } from '../../services/map.service'
+import { AuthService } from "../../services/auth.service";
+import { MapService } from "../../services/map.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.scss"],
 })
 export class LoginComponent implements OnInit {
   loggingIn: boolean;
   errorMessage: string;
   registeringUser = false;
 
-  constructor(private auth: AuthService, public mapService: MapService, private router: Router) { }
+  constructor(
+    private auth: AuthService,
+    public mapService: MapService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.loggingIn = false;
-    this.errorMessage = '';
+    this.errorMessage = "";
   }
 
   login(username: HTMLInputElement, password: HTMLInputElement): void {
     if (username.value.length < 1 || password.value.length < 1) {
-      alert('Username and Password are required');
+      alert("Username and Password are required");
       return;
     }
 
     this.loggingIn = true;
-    this.errorMessage = '';
-    this.auth.login(username.value, password.value).subscribe(response => {
+    this.errorMessage = "";
+    this.auth.login(username.value, password.value).subscribe((response) => {
       this.handleLoginResponse(response);
-
-    }
-    )
+    });
   }
   handleLoginResponse(response): void {
     // this endpoint returns a user object on success
     this.loggingIn = false;
     if (response.error) {
-      console.log('Error:loginResponse: ' + response.error);
+      console.log("Error:loginResponse: " + response.error);
       this.errorMessage = response.error;
     } else {
-      this.router.navigateByUrl('/mapList')
+      this.router.navigateByUrl("/home");
     }
   }
 

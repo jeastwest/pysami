@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900');
-@import url('https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900");
+@import url("https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css");
 
-html {
-  background: linear-gradient(to top left, lightgreen, white
-  );
-}
+html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(to top left, #002137, #197ec0);
 }
 
 .legend-info {
@@ -36,21 +32,20 @@ body {
   float: left;
   margin-right: 8px;
   opacity: 0.7;
-
 }
 
 form {
   z-index: 999;
   position: absolute;
   background-color: white;
-left:30%;
-top:0;
+  left: 30%;
+  top: 0;
 }
 
 .navselect {
   z-index: 999;
   position: absolute;
   background-color: white;
-left:30%;
-top:0;
+  left: 30%;
+  top: 0;
 }

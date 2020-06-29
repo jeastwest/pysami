@@ -1,0 +1,24 @@
+<mat-card>
+  <form class="map-form" [formGroup]="mapForm">
+    <!-- <input matInput type="text" formControlName="mapname" />
+  <input matInput type="text" formControlName="cityname" />
+  <input matInput type="text" formControlName="shapefileName" />
+  <input matInput type="text" formControlName="featuresfileName" /> -->
+    <mat-form-field>
+      <mat-label>Map Name</mat-label>
+      <input matInput type="text" formControlName="mapname" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>City Name</mat-label>
+      <input matInput type="text" formControlName="cityname" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Shape File Name</mat-label>
+      <input matInput type="text" formControlName="shapefileName" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Features File Name</mat-label>
+      <input matInput type="text" formControlName="featuresfileName" />
+    </mat-form-field>
+  </form>
+</mat-card>

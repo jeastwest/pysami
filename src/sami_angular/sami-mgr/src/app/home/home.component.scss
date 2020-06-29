@@ -1,85 +1,46 @@
-h1{
-    text-align: center;
+.map-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+  padding: 1rem;
+  gap: 1rem;
 }
 
-mat-tab-group {
-    margin-bottom: 20em;
+.map-item {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  background: gray;
+  width: 300px;
+  min-height: 200px;
+  border-radius: 5px;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  margin: 1rem;
+  box-shadow: -2px -2px 2px #1a5a77, 20px 20px 20px #1a5a77;
 }
 
-@media only screen and (max-width: 600px) {
-    .expandedButton{
-      display: none;
-    }
+.map-item:hover {
+  background: rgb(161, 161, 161);
+  box-shadow: -1px -1px 1px #1a5a77, 10px 10px 10px #1a5a77;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.controls {
+  flex: 0 1 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#add-map {
+  text-align: center;
+}
+
+@media only screen and (max-width: 730px) {
+  .map-menu {
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
   }
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-
-    li { 
-        border-radius: .5em;
-        background: whitesmoke;
-        padding: 1em;
-        margin-right: 10px;
-        width: 26%;
-        height: 200px;
-        margin-bottom: 1em;
-        margin-left: 1em;
-        display: flex;
-        flex-direction: column;
-
-        &:hover{
-            background-color:darken(whitesmoke, 10%);
-          } 
-
-        p {
-            margin:0;
-        }
-
-        p.name{
-            font-weight:bold;
-            font-size: 1.2rem;
-        }
-
-        p.studyarea{
-            font-weight:bold;
-            font-size: 1.2rem;
-        }
-
-
-        p.city {
-            text-transform: uppercase;
-            font-size: .9rem;
-            flex-grow:1;
-        }
-      
-    }
-    .adding-map {
-        position: relative;
-        left: 0;
-
-        background: rgb(238,238,238);
-        padding: 1.5em;
-        margin-top: 3em;
-        margin-left: auto;
-        margin-right: auto;
-        width: auto;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        button {
-            background-color: blue;
-            padding-left: auto;
-            padding-right:auto;
-            &:hover{
-                background-color:darken(blue, 10%);
-              } 
-
-        }
-    
-    } 
-  
 }

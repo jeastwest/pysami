@@ -12,16 +12,14 @@ import { User } from "../models/user.model";
 import { Router } from "@angular/router";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class AuthService {
   httpOptions = {
     headers: new HttpHeaders({
-      "Content-Type": "application/json"
-    })
+      "Content-Type": "application/json",
+    }),
   };
-
-  private users: User[] = [];
 
   public myuser;
 
@@ -31,29 +29,8 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private cookieService: CookieService,
-    private router: Router,
-  ) { }
-
-  // /Users - returns json: all registered users
-  getUsers(): Observable<any> {
-    const options = {
-      headers: new HttpHeaders({
-        Authorization: "Bearer " + this.getAuthToken(),
-        "Content-Type": "application/json"
-      })
-    };
-    return this.http.get<User[]>(environment.authUrl + "users/", options).pipe(
-      // timeout(5000),
-      tap(users => {
-        if (users) {
-          this.users = [...users];
-        }
-      }),
-      catchError(err => {
-        return of({ error: "failed to retrieve users!" });
-      })
-    );
-  }
+    private router: Router
+  ) {}
 
   // GET/auth/users/me/ - endpoint that gets current active user
   // required params - needs jwt accept token
@@ -61,25 +38,15 @@ export class AuthService {
     const options = {
       headers: new HttpHeaders({
         Authorization: "Bearer " + this.getAuthToken(),
-        "Content-Type": "application/json"
-      })
+        "Content-Type": "application/json",
+      }),
     };
-    return this.http.get(environment.authUrl + "users/me/", options).pipe(
+    return this.http.get(environment.apiUrl + "auth/users/me/", options).pipe(
       // timeout(1000),
-
-      catchError(err => {
+      catchError((err) => {
         return of({ error: "failed to retrieve users!" });
       })
     );
-  }
-
-
-  getUserByName(username: string): User {
-    for (const user of this.users) {
-      if (user.username === username) {
-        return user;
-      }
-    }
   }
 
   // POST/auth/users/ - endpoint that allows registration of new users
@@ -100,10 +67,10 @@ export class AuthService {
       email,
     };
     return this.http
-      .post<any>(environment.authUrl + "users/", newUser, this.httpOptions)
+      .post<any>(environment.apiUrl + "auth/users/", newUser, this.httpOptions)
       .pipe(
         // timeout(10000),
-        catchError(err => {
+        catchError((err) => {
           return of({ error: "failed to register user!" });
         })
       );
@@ -115,17 +82,21 @@ export class AuthService {
   login(username: string, password: string): Observable<any> {
     const login = {
       username,
-      password
+      password,
     };
     return this.http
-      .post<any>(environment.authUrl + "jwt/create/", login, this.httpOptions)
+      .post<any>(
+        environment.apiUrl + "auth/jwt/create/",
+        login,
+        this.httpOptions
+      )
       .pipe(
         // timeout(1000),
         tap((response: any) => {
           this.setToken(response.access, response.refresh);
-          this.loadCredentials()
+          this.loadCredentials();
         }),
-        catchError(err => {
+        catchError((err) => {
           console.log(err);
           return of({ error: "falied to login user!" });
         })
@@ -141,15 +112,7 @@ export class AuthService {
     this.myuser = null;
   }
 
-  // api call
-  // NOT CURRENTLY IMPLEMENTED
-  disableUser(username: string): void {
-    // disable an existing user and update userlist
-    const user = this.getUserByName(username);
-    user.enabled = false;
-  }
-
-  isAuthenticated(): boolean {
+  userIsAuthenticated(): boolean {
     return this.authenticated;
   }
 
@@ -170,7 +133,7 @@ export class AuthService {
   setToken(token, rToken) {
     this.authToken = {
       access: token,
-      refresh: rToken
+      refresh: rToken,
     };
     this.cookieService.set("JWT_TOKEN", token);
     this.cookieService.set("JWT_REFRESH_TOKEN", rToken);
@@ -178,12 +141,12 @@ export class AuthService {
   }
 
   loadCredentials(): void {
-    setTimeout(() =>
-      this.getCurrentUser().subscribe(
-        myuser => {
-          return this.myuser = [myuser.username]
-        },
-      )
-      , 500);
+    this.getCurrentUser().subscribe((myuser) => {
+      this.myuser = [myuser.username];
+    });
+  }
+
+  getUsername(): string {
+    return this.myuser;
   }
 }
