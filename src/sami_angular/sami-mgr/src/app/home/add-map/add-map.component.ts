@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { UtilityService } from "src/app/services/utility.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-add-map",
@@ -11,6 +12,7 @@ export class AddMapComponent implements OnInit {
   mapForm: FormGroup;
 
   constructor(
+    private router: Router,
     private fb: FormBuilder,
     private utilityService: UtilityService
   ) {}
@@ -32,6 +34,10 @@ export class AddMapComponent implements OnInit {
         this.mapForm.get("shapefileName").value,
         this.mapForm.get("featuresfileName").value
       )
-      .subscribe();
+      .subscribe((response) => {
+        console.log(response);
+        // need to do error checking here
+        this.router.navigateByUrl(`map/:${response.pk}`);
+      });
   }
 }

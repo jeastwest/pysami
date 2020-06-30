@@ -154,18 +154,32 @@ export class UtilityService {
 
   // POST/api/map/ - endpoint that allows registration of new maps
   // required params - map name, city
+
+  // what this function needs to do is
+  // use the file paths to get and parse the files into the
+  // appropriate format for the backend to utilize and store
   createMap(
     Name: string,
     City: string,
     Study_area: string,
     featureFileName: string
   ): Observable<any> {
+    // this call for the auth that occurs throughout the app
+    // can be abstracted away with an Angular Interceptor
     const options = {
       headers: new HttpHeaders({
         Authorization: "Bearer " + this.auth.getAuthToken(),
         "Content-Type": "application/json",
       }),
     };
+
+    // get the file data and convert here
+
+    // the newMap object should be something more like:
+    // mapName: string
+    // cityName: string
+    // studyAreaShapeData: blob
+    // studyAreaFeaturesData: json
     let newMap = {
       Name,
       City,
@@ -174,7 +188,6 @@ export class UtilityService {
     return this.http
       .post<any>(environment.apiUrl + "api/maps/", newMap, options)
       .pipe(
-        // timeout(10000),
         catchError((err) => {
           return of({ error: "failed to add map" });
         })
