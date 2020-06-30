@@ -40,7 +40,6 @@ export class HomeComponent implements OnInit {
   }
 
   addMap(): void {
-    console.log("add new map, not yet implemented!");
     this.addingMap = true;
   }
 

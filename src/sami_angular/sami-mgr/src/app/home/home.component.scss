@@ -25,18 +25,9 @@
   box-shadow: -1px -1px 1px #1a5a77, 10px 10px 10px #1a5a77;
 }
 
-.content {
-  flex: 1 1 auto;
-}
-
-.controls {
-  flex: 0 1 40px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-#add-map {
+.add-map {
   text-align: center;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 730px) {

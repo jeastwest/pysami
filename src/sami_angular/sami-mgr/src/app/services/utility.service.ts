@@ -75,7 +75,6 @@ export class UtilityService {
       // TODO:
       // this can be improved, edge cases currently could return true for two adjoining cells
       // if the point is equidistant to both centroids.
-      // leaving out the = could cause valid matches to return false?
       hazardPoint.lat <= centerPoint[1] + halfCellSizeInDegrees &&
       hazardPoint.lat >= centerPoint[1] - halfCellSizeInDegrees &&
       hazardPoint.lng <= centerPoint[0] + halfCellSizeInDegrees &&
@@ -155,8 +154,12 @@ export class UtilityService {
 
   // POST/api/map/ - endpoint that allows registration of new maps
   // required params - map name, city
-  // No authentication required
-  createMap(Name: string, City: string, Study_area: string): Observable<any> {
+  createMap(
+    Name: string,
+    City: string,
+    Study_area: string,
+    featureFileName: string
+  ): Observable<any> {
     const options = {
       headers: new HttpHeaders({
         Authorization: "Bearer " + this.auth.getAuthToken(),

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { UtilityService } from "src/app/services/utility.service";
 
 @Component({
   selector: "app-add-map",
@@ -9,7 +10,10 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 export class AddMapComponent implements OnInit {
   mapForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private utilityService: UtilityService
+  ) {}
 
   ngOnInit(): void {
     this.mapForm = this.fb.group({
@@ -19,42 +23,15 @@ export class AddMapComponent implements OnInit {
       featuresfileName: [null, Validators.required],
     });
   }
-  // onSubmit(f: NgForm) {
-  //   const Name = f.value.name;
-  //   const City = f.value.city;
-  //   const File = this.studyAreaFiles[0].name;
-  //   let result;
 
-  //   if (this.studyAreaFiles.length > 0) {
-  //     const reader = new FileReader();
-  //     reader.onload = (e) => {
-  //       if (reader.result) {
-  //         this.parseCSV(reader.result);
-  //       }
-  //     };
-  //     reader.readAsText(this.studyAreaFiles[0]);
-
-  //     this.utilityService.createMap(Name, City, File).subscribe((response) => {
-  //       console.log(response);
-  //       this.getMaps();
-  //     });
-  //   } else {
-  //     console.log("no file selected!");
-  //   }
-  // }
-
-  // updateAreaFilePath($event): void {
-  //   this.studyAreaFiles = $event.target.files;
-  // }
-
-  // parseCSV(file): void {
-  //   console.log("onload result: ", file);
-  // }
-
-  // quitForm(): any {
-  //   alert("quitting");
-  //   return;
-  // }
-
-  addMap(): void {}
+  addMap(): void {
+    this.utilityService
+      .createMap(
+        this.mapForm.get("mapname").value,
+        this.mapForm.get("cityname").value,
+        this.mapForm.get("shapefileName").value,
+        this.mapForm.get("featuresfileName").value
+      )
+      .subscribe();
+  }
 }

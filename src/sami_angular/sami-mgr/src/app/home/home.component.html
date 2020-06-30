@@ -20,11 +20,13 @@
   </ng-container>
 
   <ng-container *ngIf="!addingMap">
-    <div class="map-item" (click)="addMap()">
+    <div class="map-item">
       <mat-card>
-        <mat-card-content>
-          <h1>Add Map</h1>
-          <h1>+</h1>
+        <mat-card-content (click)="addMap()">
+          <div class="add-map">
+            <h1>Add Map</h1>
+            <h1>+</h1>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
