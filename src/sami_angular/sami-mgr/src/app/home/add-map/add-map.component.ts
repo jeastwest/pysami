@@ -55,4 +55,6 @@ export class AddMapComponent implements OnInit {
   //   alert("quitting");
   //   return;
   // }
+
+  addMap(): void {}
 }

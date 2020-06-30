@@ -1,9 +1,5 @@
-<mat-card>
+<div class="add-map-card">
   <form class="map-form" [formGroup]="mapForm">
-    <!-- <input matInput type="text" formControlName="mapname" />
-  <input matInput type="text" formControlName="cityname" />
-  <input matInput type="text" formControlName="shapefileName" />
-  <input matInput type="text" formControlName="featuresfileName" /> -->
     <mat-form-field>
       <mat-label>Map Name</mat-label>
       <input matInput type="text" formControlName="mapname" />
@@ -21,4 +17,5 @@
       <input matInput type="text" formControlName="featuresfileName" />
     </mat-form-field>
   </form>
-</mat-card>
+  <button mat-raised-button (click)="addMap()">Create Map</button>
+</div>

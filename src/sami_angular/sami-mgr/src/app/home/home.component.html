@@ -1,40 +1,46 @@
 <div class="map-menu">
   <ng-container *ngFor="let map of maps">
     <div class="map-item">
-      <div class="content">
-        <h1 class="name">{{ map.Name }}</h1>
-        <p class="city">{{ map.City }}</p>
-        <p class="studyarea">{{ map.Study_area }}</p>
-      </div>
-      <div class="controls">
-        <button mat-raised-button (click)="gotoSelectedMap(map.pk)">
-          View map
-        </button>
-        <button mat-raised-button (click)="deleteMap(map.pk)">
-          Delete map
-        </button>
-      </div>
+      <mat-card>
+        <mat-card-content>
+          <h1 class="name">{{ map.Name }}</h1>
+          <p class="city">{{ map.City }}</p>
+          <p class="studyarea">{{ map.Study_area }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="gotoSelectedMap(map.pk)">
+            View map
+          </button>
+          <button mat-raised-button (click)="deleteMap(map.pk)">
+            Delete map
+          </button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </ng-container>
 
   <ng-container *ngIf="!addingMap">
     <div class="map-item" (click)="addMap()">
-      <div class="content" id="add-map">
-        <h1>Add Map</h1>
-        <h1>+</h1>
-      </div>
+      <mat-card>
+        <mat-card-content>
+          <h1>Add Map</h1>
+          <h1>+</h1>
+        </mat-card-content>
+      </mat-card>
     </div>
   </ng-container>
   <ng-container *ngIf="addingMap">
     <div class="map-item">
-      <div class="content">
-        <app-add-map></app-add-map>
-      </div>
-      <div class="controls">
-        <button mat-raised-button type="button" (click)="cancel()">
-          cancel
-        </button>
-      </div>
+      <mat-card>
+        <mat-card-content>
+          <app-add-map></app-add-map>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button type="button" (click)="cancel()">
+            cancel
+          </button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </ng-container>
 </div>
