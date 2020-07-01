@@ -28,13 +28,6 @@ import { MatTableDataSource } from "@angular/material/table";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatRadioModule } from "@angular/material/radio";
 
-import { AuthService } from "./services/auth.service";
-import { AuthEffects } from "./store/effects/auth.effects";
-import { PopUpService } from "./services/pop-up.service";
-import { StudyAreaService } from "./services/study-area.service";
-import { MapService } from "./services/map.service";
-import { UtilityService } from "./services/utility.service";
-
 import { HeaderComponent } from "./header/header.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./admin/login/login.component";

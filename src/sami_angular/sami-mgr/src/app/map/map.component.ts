@@ -9,7 +9,6 @@ import * as L from "leaflet";
 import * as GeoJSON from "node_modules/geojson";
 import * as fullscreen from "leaflet.fullscreen";
 import { icon, Marker } from "leaflet";
-import { StudyAreaService } from "../services/study-area.service";
 import { MapService } from "../services/map.service";
 import { UtilityService } from "../services/utility.service";
 import { FormComponent } from "../form/form.component";
@@ -48,39 +47,30 @@ export class MapComponent {
   showTable = false;
   showChart = false;
   showSettings = false;
-  private studyAreas;
   public clickedCoordinates;
 
   @Output() registeringSource = new EventEmitter<boolean>();
+  mapID = "";
   waitingForResponse: boolean;
   errorMessage: string;
   addingSource = false;
 
   constructor(
-    private studyAreaService: StudyAreaService,
     private mapService: MapService,
     private router: Router,
-    private route: ActivatedRoute,
-    private location: Location,
-    private utilityService: UtilityService
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    this.mapService.activateStudyArea(this.getMapId());
-
-    this.mapService.initMap();
-
-    this.mapService.map.on("click", (event) => {
-      this.clickedCoordinates = [event.latlng.lng, event.latlng.lat];
-      this.addSource();
-    });
+    this.mapID = this.route.snapshot.paramMap.get("id");
+    if (this.mapID) {
+      this.mapService.initMap();
+      this.mapService.activateMap(this.mapID);
+    }
   }
+
   addSource(): any {
     this.addingSource = true;
-  }
-
-  getMapId(): string {
-    return this.route.snapshot.paramMap.get("id");
   }
 
   back(): void {

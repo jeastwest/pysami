@@ -3,9 +3,10 @@
     <div class="map-item">
       <mat-card>
         <mat-card-content>
-          <h1 class="name">{{ map.Name }}</h1>
-          <p class="city">{{ map.City }}</p>
-          <p class="studyarea">{{ map.Study_area }}</p>
+          <h1>{{ map.Name }}</h1>
+          <p>{{ map.City }}</p>
+          <p>{{ map.shapeFile }}</p>
+          <p>{{ map.featureFile }}</p>
         </mat-card-content>
         <mat-card-actions>
           <button mat-raised-button (click)="gotoSelectedMap(map.pk)">

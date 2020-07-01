@@ -1,18 +1,11 @@
 import { Injectable } from "@angular/core";
-import { Observable, throwError, of } from "rxjs";
-import { timeout, catchError, tap } from "rxjs/operators";
-import { filter } from "rxjs/operators";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { environment } from "../../environments/environment";
 
 import { UserMap } from "../models/maps.model";
 import { Source } from "../models/sources.model";
 
-import { AuthService } from "./auth.service";
-
 import * as L from "leaflet";
 import * as turf from "@turf/turf";
-import * as d3 from "d3";
 
 @Injectable({
   providedIn: "root",
@@ -20,7 +13,7 @@ import * as d3 from "d3";
 export class UtilityService {
   public myMaps: UserMap[] = [];
   public sources: Source[] = [];
-  constructor(private auth: AuthService, public http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   // build custom icons
   public hazmatIcon = L.icon({
@@ -55,10 +48,7 @@ export class UtilityService {
     for (let cell of cells) {
       for (let corner of cell.corners) {
         if (
-          turf.booleanPointInPolygon(
-            turf.point(corner),
-            studyArea.features[0].geometry
-          )
+          turf.booleanPointInPolygon(turf.point(corner), studyArea.geometry)
         ) {
           result.push(cell);
           break;
@@ -131,158 +121,4 @@ export class UtilityService {
     // '<br>Added By: ' + feature.Map); // unused map-source verification
     return marker;
   }
-
-  loadMaps(): Observable<any> {
-    const options = {
-      headers: new HttpHeaders({
-        Authorization: "Bearer " + this.auth.getAuthToken(),
-        "Content-Type": "application/json",
-      }),
-    };
-    return this.http.get<any>(environment.apiUrl + "api/maps/", options).pipe(
-      timeout(5000),
-      tap((myMaps) => {
-        if (myMaps) {
-          this.myMaps = [...myMaps];
-        }
-      }),
-      catchError((err) => {
-        return of({ error: "failed to retrieve maps!" });
-      })
-    );
-  }
-
-  // POST/api/map/ - endpoint that allows registration of new maps
-  // required params - map name, city
-
-  // what this function needs to do is
-  // use the file paths to get and parse the files into the
-  // appropriate format for the backend to utilize and store
-  createMap(
-    Name: string,
-    City: string,
-    Study_area: string,
-    featureFileName: string
-  ): Observable<any> {
-    // this call for the auth that occurs throughout the app
-    // can be abstracted away with an Angular Interceptor
-    const options = {
-      headers: new HttpHeaders({
-        Authorization: "Bearer " + this.auth.getAuthToken(),
-        "Content-Type": "application/json",
-      }),
-    };
-
-    // get the file data and convert here
-
-    // the newMap object should be something more like:
-    // mapName: string
-    // cityName: string
-    // studyAreaShapeData: blob
-    // studyAreaFeaturesData: json
-    let newMap = {
-      Name,
-      City,
-      Study_area,
-    };
-    return this.http
-      .post<any>(environment.apiUrl + "api/maps/", newMap, options)
-      .pipe(
-        catchError((err) => {
-          return of({ error: "failed to add map" });
-        })
-      );
-  }
-
-  getSelectedMapSources(map_id: string): Observable<any> {
-    const options = {
-      headers: new HttpHeaders({
-        Authorization: "Bearer " + this.auth.getAuthToken(),
-        "Content-Type": "application/json",
-      }),
-    };
-    return this.http
-      .get<any>(environment.apiUrl + "api/sources/" + map_id + "/", options)
-      .pipe(
-        // timeout(5000),
-        tap((response) => {
-          this.sources = [...response];
-          console.log(this.sources);
-        }),
-        catchError((err) => {
-          return of({ error: "failed to retrieve table values!" });
-        })
-      );
-  }
-
-  // getMapTableValues(): Observable<any> {
-  //   return this.http.get<Source[]>(environment.apiUrl + 'sources/', this.httpOptions).pipe(
-  //     timeout(5000),
-  //     tap(sources => {
-  //       if (sources) {
-  //         this.sources = [...sources];
-
-  //       }
-  //     }),
-  //     catchError(err => {
-  //       return of({ error: "failed to retrieve table values!" });
-  //     })
-  //   )
-  // }
-
-  addNewSource(
-    Map: string,
-    Latitude: number,
-    Longitude: number,
-    Description: string,
-    Intensity: number,
-    Dispersion: number,
-    Name: string
-  ): Observable<any> {
-    const options = {
-      headers: new HttpHeaders({
-        Authorization: "Bearer " + this.auth.getAuthToken(),
-        "Content-Type": "application/json",
-      }),
-    };
-    const newSource = {
-      Map,
-      Longitude,
-      Latitude,
-      Description,
-      Intensity,
-      Dispersion,
-      Name,
-    };
-    return this.http
-      .post(environment.apiUrl + "api/sources/" + Map + "/", newSource, options)
-      .pipe(
-        timeout(5000),
-        tap((response: any) => {
-          console.log("response from /sources " + response);
-        }),
-        catchError((err) => {
-          return of({ error: "failed to add new source!" });
-        })
-      );
-  }
 }
-
-// loads local shape file and initializes a new studyArea
-// handleUpload() {
-//   const file = document.getElementById('inputFeatureFile').files[0];
-//   if (file) {
-//     const reader = new FileReader();
-//     reader.onload = function () {
-//       if (reader.result) {
-//         result = JSON.parse(reader.result);
-//         activeStudyArea = initializNewStudyArea(result);
-//         activeStudyArea.areaLayer.addTo(map);
-//         map.flyToBounds(turfBBoxToLeafletBounds(activeStudyArea.bbox));
-//       }
-//     };
-//     reader.readAsBinaryString(file);
-//   } else {
-//     console.log('no file selected!');
-//   }
-// }

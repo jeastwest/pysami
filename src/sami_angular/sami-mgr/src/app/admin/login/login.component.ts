@@ -37,14 +37,17 @@ export class LoginComponent implements OnInit {
       this.handleLoginResponse(response);
     });
   }
+
   handleLoginResponse(response): void {
-    // this endpoint returns a user object on success
+    // this endpoint returns a SimpleJWT object on success
     this.loggingIn = false;
     if (response.error) {
       console.log("Error:loginResponse: " + response.error);
       this.errorMessage = response.error;
     } else {
-      this.router.navigateByUrl("/home");
+      this.auth.getUser().subscribe((user) => {
+        this.router.navigateByUrl("/home");
+      });
     }
   }
 

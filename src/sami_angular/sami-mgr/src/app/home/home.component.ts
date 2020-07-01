@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 
-import { UtilityService } from "../services/utility.service";
+import { MapService } from "../services/map.service";
 
 @Component({
   selector: "app-home",
@@ -10,45 +10,31 @@ import { UtilityService } from "../services/utility.service";
 })
 export class HomeComponent implements OnInit {
   statusMessage: string;
-  loadingUserMaps: boolean;
   studyAreaFiles: FileList;
 
   maps: any;
 
   addingMap = false;
 
-  constructor(private router: Router, private utilityService: UtilityService) {}
+  constructor(private router: Router, private mapService: MapService) {}
 
   ngOnInit(): void {
     this.statusMessage = "";
-    this.loadingUserMaps = false;
     this.getMaps();
-  }
-
-  getMaps() {
-    this.utilityService.loadMaps().subscribe(
-      (maps) => {
-        this.maps = maps;
-      },
-      (err) => {
-        this.statusMessage = "Error retrieving data";
-      },
-      () => {
-        this.loadingUserMaps = false;
-      }
-    );
   }
 
   addMap(): void {
     this.addingMap = true;
   }
 
-  deleteMap(id): void {
-    console.log(`delete map ${id}, not yet implemented!`);
+  gotoSelectedMap(id: string) {
+    this.router.navigateByUrl(`/map/${id}`);
   }
 
-  gotoSelectedMap(id: string) {
-    this.router.navigateByUrl("/map/" + id);
+  getMaps() {
+    this.mapService.getUserMaps().subscribe((maps) => {
+      this.maps = [...maps];
+    });
   }
 
   isAddingMap($event): void {
@@ -56,6 +42,10 @@ export class HomeComponent implements OnInit {
     if (!this.addingMap) {
       this.getMaps();
     }
+  }
+
+  deleteMap(id): void {
+    console.log(`delete map ${id}, not yet implemented!`);
   }
 
   cancel(): void {

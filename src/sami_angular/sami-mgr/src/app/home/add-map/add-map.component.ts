@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { UtilityService } from "src/app/services/utility.service";
 import { Router } from "@angular/router";
+import { MapService } from "src/app/services/map.service";
 
 @Component({
   selector: "app-add-map",
@@ -14,23 +15,23 @@ export class AddMapComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private utilityService: UtilityService
+    private mapService: MapService
   ) {}
 
   ngOnInit(): void {
     this.mapForm = this.fb.group({
-      mapname: [null, Validators.required],
-      cityname: [null, Validators.required],
+      mapName: [null, Validators.required],
+      area: [null, Validators.required],
       shapefileName: [null, Validators.required],
       featuresfileName: [null, Validators.required],
     });
   }
 
   addMap(): void {
-    this.utilityService
+    this.mapService
       .createMap(
-        this.mapForm.get("mapname").value,
-        this.mapForm.get("cityname").value,
+        this.mapForm.get("mapName").value,
+        this.mapForm.get("area").value,
         this.mapForm.get("shapefileName").value,
         this.mapForm.get("featuresfileName").value
       )
