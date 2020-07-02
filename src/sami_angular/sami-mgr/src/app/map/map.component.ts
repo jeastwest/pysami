@@ -50,7 +50,7 @@ export class MapComponent {
   public clickedCoordinates;
 
   @Output() registeringSource = new EventEmitter<boolean>();
-  mapID = "";
+  mapID: number;
   waitingForResponse: boolean;
   errorMessage: string;
   addingSource = false;
@@ -62,15 +62,15 @@ export class MapComponent {
   ) {}
 
   ngOnInit(): void {
-    this.mapID = this.route.snapshot.paramMap.get("id");
+    this.mapID = +this.route.snapshot.paramMap.get("id");
     if (this.mapID) {
       this.mapService.initMap();
       this.mapService.activateMap(this.mapID);
     }
   }
 
-  addSource(): any {
-    this.addingSource = true;
+  addFeature(): void {
+    console.log("add feature not yet implemented!");
   }
 
   back(): void {

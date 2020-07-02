@@ -101,18 +101,9 @@ export class MapService {
       renderer: L.canvas(), // <-- adding this doesn't seem to make much difference in performance
     });
 
-    this.map.on("click", (event) => {
-      this.addSource(event);
-    });
-
-    const tiles = L.tileLayer(
-      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }
-    );
+    // this.map.on("click", (event) => {
+    //   this.addSource(event);
+    // });
 
     // Map tile sets
     const OpenStreetMap_Map = L.tileLayer(
@@ -132,8 +123,6 @@ export class MapService {
           '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
       }
     );
-
-    tiles.addTo(this.map);
 
     const CartoDB_Voyager = L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -193,23 +182,23 @@ export class MapService {
 
   activateMap(mapID) {
     let userMap = this.studyAreas.find((a) => {
-      return a.pk === +mapID;
+      return a.pk === mapID;
     });
     if (!userMap) {
       userMap = this.maps.find((m) => {
-        return m.pk === +mapID;
+        return m.pk === mapID;
       });
       if (userMap) {
         userMap.studyArea = this.initializNewStudyArea(this.houstonPoly);
+        this.studyAreas.push({ ...userMap });
       }
     }
     this.activeMap = userMap;
     this.activeStudyArea = this.activeMap.studyArea;
-    this.studyAreas.push({ ...this.activeMap });
-    this.activeStudyArea.areaLayer.addTo(this.map);
     this.map.flyToBounds(
       this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
     );
+    this.activeStudyArea.areaLayer.addTo(this.map);
     this.getActiveMapSources(mapID);
     this.updateHeatmaps(this.activeStudyArea);
     this.buildHeatmapLayers(this.activeStudyArea);
@@ -228,10 +217,17 @@ export class MapService {
       }),
     };
     // const newMap = { name, area, shapeFile, featureList };
-    const newMap = { Name: name, City: area, Study_Area: shapeFile };
+    let newMap = { Name: name, City: area, Study_Area: shapeFile };
     return this.http
       .post<any>(environment.apiUrl + "api/maps/", newMap, options)
       .pipe(
+        tap(async () => {
+          let userMap = { ...newMap, studyArea: null };
+          userMap.studyArea = await this.initializNewStudyArea(
+            this.houstonPoly
+          );
+          this.studyAreas.push({ ...userMap });
+        }),
         catchError((err) => {
           return of({ error: "failed to add map" });
         })
@@ -524,6 +520,18 @@ export class MapService {
     );
   }
 
+  setGradientType(gradient) {
+    this.gradientType = gradient;
+  }
+
+  getGradientType() {
+    return this.gradientType;
+  }
+
+  getDefaultGradient() {
+    return this.DEFAULT_GRADIENT;
+  }
+
   updateLayers(map_id: string) {
     console.log(this.layerControls);
     const layers = this.layerControls._layers;
@@ -580,15 +588,6 @@ export class MapService {
     return d3.interpolateReds(intensity);
   }
 
-  drawDebug(studyArea) {
-    // draw area bounding box
-    L.rectangle(this.utilityService.turfBBoxToLeafletBounds(studyArea.bbox), {
-      color: "#0000ff",
-      weight: 1,
-      fillOpacity: 0.0,
-    }).addTo(this.map);
-  }
-
   // handleUpload() {
   //   const file = document.getElementById('inputFeatureFile').files[0];
   //   if (file) {
@@ -627,6 +626,7 @@ export class MapService {
   //   });
   // }
 
+  // called by the constructor to pre-load shape files
   getNolaShape(): Observable<any> {
     return this.http.get("../../assets/data/nolaPoly.json");
   }

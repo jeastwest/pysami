@@ -1,21 +1,34 @@
 <p>Color Scaling Factor:</p>
-<mat-radio-group class="example-radio-group">
-  <mat-radio-button name="relative" id="rel" value="relative" checked
-    >Relative</mat-radio-button
-  >
-  <mat-radio-button name="absolute" id="abs" value="absolute"
-    >Absolute</mat-radio-button
-  >
-</mat-radio-group>
-<div *ngIf="mapService.gradientType === 'absolute'">
-  <input
-    matInput
-    href="#"
-    id=" absGradient"
-    type="number"
-    name="selector"
-    value="10000"
-    min="1"
-    max="50000"
-  /><br />
+<div>
+  <form [formGroup]="gradientForm" (click)="setGradientType()">
+    <mat-label>Relative</mat-label>
+    <input
+      type="radio"
+      name="gradientType"
+      id="relative"
+      value="relative"
+      formControlName="gradientType"
+    />
+    <mat-label>Absoulte</mat-label>
+    <input
+      type="radio"
+      name="gradientType"
+      id="absolute"
+      value="absolute"
+      formControlName="gradientType"
+    />
+    <div *ngIf="getGradientType() === 'abs'">
+      <mat-label>Abs Upper Threshold</mat-label>
+      <input
+        matInput
+        id=" absGradient"
+        type="number"
+        name="absThreshold"
+        value="10000"
+        min="1"
+        max="50000"
+        formControlName="absThreshold"
+      />
+    </div>
+  </form>
 </div>
