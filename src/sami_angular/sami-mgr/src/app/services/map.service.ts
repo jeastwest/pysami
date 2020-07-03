@@ -35,7 +35,7 @@ export class MapService {
   MIN_INTENSITY_COLOR = "#d3d3d3";
   MIN_INTENSITY_THRESHOLD = 0.01;
 
-  DEFAULT_GRADIENT_THRESHOLD = 10000;
+  DEFAULT_ABS_GRADIENT_THRESHOLD = 10000;
   DEFAULT_CELL_OPACITY = 0.5;
 
   // gradientTypes - ['relative', 'absolute']
@@ -51,7 +51,7 @@ export class MapService {
 
   cellSize = this.DEFAULT_CELL_SIZE;
   gradientType = this.DEFAULT_GRADIENT;
-  gradientThreshold = this.DEFAULT_GRADIENT_THRESHOLD;
+  absGradientThreshold = this.DEFAULT_ABS_GRADIENT_THRESHOLD;
   dispersionType = this.DEFAULT_DISPERSION;
 
   maps = [];
@@ -193,15 +193,23 @@ export class MapService {
         this.studyAreas.push({ ...userMap });
       }
     }
-    this.activeMap = userMap;
-    this.activeStudyArea = this.activeMap.studyArea;
-    this.map.flyToBounds(
-      this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
-    );
-    this.activeStudyArea.areaLayer.addTo(this.map);
-    this.getActiveMapSources(mapID);
-    this.updateHeatmaps(this.activeStudyArea);
-    this.buildHeatmapLayers(this.activeStudyArea);
+
+    if (userMap) {
+      this.activeMap = userMap;
+      this.activeStudyArea = this.activeMap.studyArea;
+      this.map.flyToBounds(
+        this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
+      );
+      this.activeStudyArea.areaLayer.addTo(this.map);
+      this.getActiveMapSources(mapID);
+      this.updateHeatmaps(this.activeStudyArea);
+      this.buildHeatmapLayers(this.activeStudyArea);
+    } else {
+      console.log(`mapID ${mapID} doesn't exist!`);
+      console.log(`If you're getting this error from home.compnent`);
+      console.log(`I have no idea why, that component shouldn't ever`);
+      console.log(`call mapService.activateMap()!!`);
+    }
   }
 
   createMap(
@@ -522,6 +530,8 @@ export class MapService {
 
   setGradientType(gradient) {
     this.gradientType = gradient;
+
+    // TODO: update heatmaps
   }
 
   getGradientType() {
@@ -530,6 +540,16 @@ export class MapService {
 
   getDefaultGradient() {
     return this.DEFAULT_GRADIENT;
+  }
+
+  setAbsThreshold(threshold) {
+    this.absGradientThreshold = threshold;
+
+    // TODO: update heatmaps
+  }
+
+  getAbsThreshold() {
+    return this.absGradientThreshold;
   }
 
   updateLayers(map_id: string) {
@@ -559,9 +579,9 @@ export class MapService {
   }
 
   calculateCellColor(intensity, max_intensity, threshold, gradientType) {
-    this.gradientThreshold = threshold
+    this.absGradientThreshold = threshold
       ? threshold
-      : this.DEFAULT_GRADIENT_THRESHOLD;
+      : this.DEFAULT_ABS_GRADIENT_THRESHOLD;
     let colorIntensity = 0;
     switch (gradientType) {
       case "relative":
@@ -573,7 +593,8 @@ export class MapService {
         }
       case "absolute":
         colorIntensity =
-          (Math.log10(intensity) - Math.log10(this.gradientThreshold) + 3) / 6; // 3 & 6 are used to translate log value to 0-1; INTENSITY_LOG_RANGE?
+          (Math.log10(intensity) - Math.log10(this.absGradientThreshold) + 3) /
+          6; // 3 & 6 are used to translate log value to 0-1; INTENSITY_LOG_RANGE?
         if (colorIntensity < this.MIN_INTENSITY_THRESHOLD) {
           return this.MIN_INTENSITY_COLOR;
         } else {

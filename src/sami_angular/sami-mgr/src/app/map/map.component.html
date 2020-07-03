@@ -1,24 +1,29 @@
 <mat-drawer-container class="map-container">
-  <mat-drawer class="side-nav" #drawer mode="side">
-    <mat-nav-list>
-      <h3 mat-list-item (click)="showSettings = !showSettings">
-        <strong>Map Settings</strong>
-      </h3>
-      <mat-card *ngIf="showSettings">
-        <app-settings></app-settings>
-      </mat-card>
-      <h3 mat-list-item (click)="showTable = !showTable">Features Table</h3>
-      <mat-card *ngIf="showTable">
-        <app-table></app-table>
-      </mat-card>
-      <h3 mat-list-item (click)="showChart = !showChart">Plot Dispersion</h3>
-      <mat-card *ngIf="showChart">
-        <app-chart></app-chart>
-      </mat-card>
-    </mat-nav-list>
+  <mat-drawer #drawer mode="side">
+    <h3 mat-list-item (click)="showSettings = !showSettings">
+      <strong>Map Settings</strong>
+    </h3>
+    <ng-container *ngIf="showSettings">
+      <app-settings></app-settings>
+    </ng-container>
+
+    <h3 mat-list-item (click)="showTable = !showTable">
+      <strong>Features Table</strong>
+    </h3>
+    <ng-container *ngIf="showTable">
+      <app-table></app-table>
+    </ng-container>
+
+    <h3 mat-list-item (click)="showChart = !showChart">
+      <strong>Plot Dispersion</strong>
+    </h3>
+    <ng-container *ngIf="showChart">
+      <app-chart></app-chart>
+    </ng-container>
   </mat-drawer>
+
   <mat-drawer-content class="map-content">
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <!-- hamburger -->
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
@@ -35,9 +40,7 @@
       </button>
       <h1 class="toolbar-tool-text">Back</h1>
     </mat-toolbar>
-    <div class="map-frame">
-      <div id="map"></div>
-    </div>
+    <div id="map"></div>
   </mat-drawer-content>
 </mat-drawer-container>
 

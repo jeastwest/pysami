@@ -15,17 +15,22 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit() {
     this.gradientForm = this.fb.group({
-      gradientType: ["relative", null],
-      absThreshold: ["10000", null],
+      gradientType: new FormControl(this.getGradientType(), null),
+      absThreshold: new FormControl(this.mapService.getAbsThreshold(), null),
     });
   }
-  public setGradientType() {
-    const gradient = this.gradientForm.get("gradientType").value;
-    console.log(gradient);
-    this.mapService.setGradientType(gradient);
+
+  setGradientType(type) {
+    this.mapService.setGradientType(type);
   }
 
-  public getGradientType() {
+  getGradientType(): string {
     return this.mapService.getGradientType();
+  }
+
+  setGradientAbsThreshold() {
+    this.mapService.setAbsThreshold(
+      this.gradientForm.get("absThreshold").value
+    );
   }
 }

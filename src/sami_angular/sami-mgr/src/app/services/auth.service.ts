@@ -70,6 +70,7 @@ export class AuthService {
           this.setToken(response.access, response.refresh);
         }),
         catchError((err) => {
+          // need better error messaging
           console.log(err);
           return of({ error: "falied to login user!" });
         })
