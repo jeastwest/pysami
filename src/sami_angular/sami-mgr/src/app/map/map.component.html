@@ -1,49 +1,48 @@
 <mat-drawer-container class="map-container">
   <mat-drawer #drawer mode="side">
-    <h3 mat-list-item (click)="showSettings = !showSettings">
-      <strong>Map Settings</strong>
-    </h3>
-    <ng-container *ngIf="showSettings">
-      <app-settings></app-settings>
-    </ng-container>
-
-    <h3 mat-list-item (click)="showTable = !showTable">
-      <strong>Features Table</strong>
-    </h3>
-    <ng-container *ngIf="showTable">
-      <app-table></app-table>
-    </ng-container>
-
-    <h3 mat-list-item (click)="showChart = !showChart">
-      <strong>Plot Dispersion</strong>
-    </h3>
-    <ng-container *ngIf="showChart">
-      <app-chart></app-chart>
-    </ng-container>
+    <div mat-list-item>
+      <button mat-button (click)="showSettings = !showSettings">
+        <strong>Map Settings</strong>
+      </button>
+      <ng-container *ngIf="showSettings">
+        <app-settings></app-settings>
+      </ng-container>
+    </div>
+    <div mat-list-item>
+      <button mat-button (click)="showTable = !showTable">
+        <strong>Features Table</strong>
+      </button>
+      <ng-container *ngIf="showTable">
+        <app-table></app-table>
+      </ng-container>
+    </div>
+    <div mat-list-item>
+      <button mat-button (click)="showChart = !showChart">
+        <strong>Plot Dispersion</strong>
+      </button>
+      <ng-container *ngIf="showChart">
+        <app-chart></app-chart>
+      </ng-container>
+    </div>
   </mat-drawer>
 
   <mat-drawer-content class="map-content">
     <mat-toolbar>
       <!-- hamburger -->
-      <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
+      <button mat-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>Tools
       </button>
-      <h1 class="toolbar-tool-text">Tools</h1>
       <!-- add feature buton -->
-      <button mat-icon-button (click)="addFeature()">
-        <mat-icon>room</mat-icon>
-      </button>
-      <h1 class="toolbar-tool-text">Add Feature</h1>
+      <div [style.background]="addLocationButtonBackgroundColor">
+        <button mat-button (click)="addFeature()">
+          <mat-icon>room</mat-icon>Add Feature
+        </button>
+      </div>
       <!-- back button -->
-      <button mat-icon-button (click)="back()">
-        <mat-icon>chevron_left</mat-icon>
+      <button mat-button (click)="back()">
+        <mat-icon>chevron_left</mat-icon>Back
       </button>
-      <h1 class="toolbar-tool-text">Back</h1>
     </mat-toolbar>
     <div id="map"></div>
   </mat-drawer-content>
 </mat-drawer-container>
-
-<ng-container class="form" *ngIf="addingSource">
-  <app-form></app-form>
-</ng-container>

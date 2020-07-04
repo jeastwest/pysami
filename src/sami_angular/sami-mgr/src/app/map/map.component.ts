@@ -1,42 +1,7 @@
-import { AfterViewInit, Component, Output, EventEmitter } from "@angular/core";
-
-import { Location } from "@angular/common";
+import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 
-import { UserMap } from "../models/maps.model";
-
-import * as L from "leaflet";
-import * as GeoJSON from "node_modules/geojson";
-import * as fullscreen from "leaflet.fullscreen";
-import { icon, Marker } from "leaflet";
 import { MapService } from "../services/map.service";
-import { UtilityService } from "../services/utility.service";
-import { FormComponent } from "../form/form.component";
-import { TableComponent } from "../table/table.component";
-
-import { MatSidenavModule } from "@angular/material/sidenav";
-import { MatListModule } from "@angular/material/list";
-import { MatIconModule } from "@angular/material/icon";
-
-import "node_modules/leaflet.fullscreen/Control.FullScreen.js";
-
-const fullscreenUrl = "assets/icon-fullscreen.png";
-const iconRetinaUrl = "assets/marker-icon-2x.png";
-const iconUrl = "assets/marker-icon.png";
-const shadowUrl = "assets/marker-shadow.png";
-declare var fullscreen: any;
-
-const iconDefault = L.icon({
-  iconRetinaUrl,
-  iconUrl,
-  shadowUrl,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  tooltipAnchor: [16, -28],
-  shadowSize: [41, 41],
-});
-L.Marker.prototype.options.icon = iconDefault;
 
 @Component({
   selector: "app-map",
@@ -47,13 +12,14 @@ export class MapComponent {
   showTable = false;
   showChart = false;
   showSettings = false;
-  public clickedCoordinates;
-
-  @Output() registeringSource = new EventEmitter<boolean>();
   mapID: number;
-  waitingForResponse: boolean;
-  errorMessage: string;
-  addingSource = false;
+
+  COLOR_INACTIVE = "rgba(255, 255, 255, 1)";
+  COLOR_ACTIVE = "rgba(0, 255, 0, 1)";
+
+  addLocationButtonBackgroundColor = this.COLOR_INACTIVE;
+
+  addingLocation = false;
 
   constructor(
     private mapService: MapService,
@@ -71,6 +37,12 @@ export class MapComponent {
 
   addFeature(): void {
     console.log("add feature not yet implemented!");
+    this.addingLocation = !this.addingLocation;
+    if (this.addingLocation) {
+      this.addLocationButtonBackgroundColor = this.COLOR_ACTIVE;
+    } else {
+      this.addLocationButtonBackgroundColor = this.COLOR_INACTIVE;
+    }
   }
 
   back(): void {

@@ -5,6 +5,7 @@ import { Observable, of } from "rxjs";
 import { timeout, catchError, tap } from "rxjs/operators";
 
 import * as L from "leaflet";
+import "node_modules/leaflet.fullscreen/Control.FullScreen.js";
 import * as turf from "@turf/turf";
 import * as d3 from "d3";
 
@@ -655,4 +656,16 @@ export class MapService {
   getHoustonShape(): Observable<any> {
     return this.http.get("../../assets/data/houstonPoly.json");
   }
+
+  // const iconDefault = L.icon({
+  //   iconRetinaUrl,
+  //   iconUrl,
+  //   shadowUrl,
+  //   iconSize: [25, 41],
+  //   iconAnchor: [12, 41],
+  //   popupAnchor: [1, -34],
+  //   tooltipAnchor: [16, -28],
+  //   shadowSize: [41, 41],
+  // });
+  // L.Marker.prototype.options.icon = iconDefault;
 }
