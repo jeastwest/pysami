@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 
+import { MatSnackBar } from "@angular/material/snack-bar";
+
 import { MapService } from "../services/map.service";
 
 @Component({
@@ -24,7 +26,8 @@ export class MapComponent {
   constructor(
     private mapService: MapService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -40,8 +43,15 @@ export class MapComponent {
     this.addingLocation = !this.addingLocation;
     if (this.addingLocation) {
       this.addLocationButtonBackgroundColor = this.COLOR_ACTIVE;
+      this.snackBar.open("Click the map to add a source location!", "Close", {
+        // duration: 2000,
+        verticalPosition: "bottom", // 'top' | 'bottom'
+        // horizontalPosition: "center", //'start' | 'center' | 'end' | 'left' | 'right'
+        panelClass: "add-location-snackbar", // expects class to be in styles.scss
+      });
     } else {
       this.addLocationButtonBackgroundColor = this.COLOR_INACTIVE;
+      this.snackBar.dismiss();
     }
   }
 
