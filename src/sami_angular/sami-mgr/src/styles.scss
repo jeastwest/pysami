@@ -34,7 +34,7 @@ body {
   opacity: 0.7;
 }
 
-form {
+.navselect {
   z-index: 999;
   position: absolute;
   background-color: white;
@@ -42,10 +42,8 @@ form {
   top: 0;
 }
 
-.navselect {
-  z-index: 999;
-  position: absolute;
-  background-color: white;
-  left: 30%;
-  top: 0;
+.add-location-snackbar {
+  padding: 0 auto;
+  background-color: #197ec0;
+  color: whitesmoke;
 }

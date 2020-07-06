@@ -1,23 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { MatRadioModule } from '@angular/material/radio';
-import { ThemePalette } from '@angular/material/core';
-import { MapService } from '../services/map.service'
-import { MapComponent } from '../map/map.component'
+import { Component, OnInit } from "@angular/core";
+import { FormGroup, FormBuilder, FormControl } from "@angular/forms";
+
+import { MapService } from "../services/map.service";
 
 @Component({
-  selector: 'app-settings',
-  templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.scss']
+  selector: "app-settings",
+  templateUrl: "./settings.component.html",
+  styleUrls: ["./settings.component.scss"],
 })
 export class SettingsComponent implements OnInit {
+  gradientForm: FormGroup;
 
-  constructor(public mapService: MapService, public mapComponent: MapComponent) { }
+  constructor(private mapService: MapService, private fb: FormBuilder) {}
+
   ngOnInit() {
-
+    this.gradientForm = this.fb.group({
+      gradientType: new FormControl(this.getGradientType(), null),
+      absThreshold: new FormControl(this.mapService.getAbsThreshold(), null),
+    });
   }
-  public checkvalues() {
-    console.log(this.mapService.gradientType)
-    console.log(this.mapService.DEFAULT_GRADIENT_THRESHOLD)
+
+  setGradientType(type) {
+    this.mapService.setGradientType(type);
   }
 
+  getGradientType(): string {
+    return this.mapService.getGradientType();
+  }
+
+  setGradientAbsThreshold() {
+    this.mapService.setAbsThreshold(
+      this.gradientForm.get("absThreshold").value
+    );
+  }
 }

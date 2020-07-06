@@ -5,6 +5,7 @@ import { Observable, of } from "rxjs";
 import { timeout, catchError, tap } from "rxjs/operators";
 
 import * as L from "leaflet";
+import "node_modules/leaflet.fullscreen/Control.FullScreen.js";
 import * as turf from "@turf/turf";
 import * as d3 from "d3";
 
@@ -35,7 +36,7 @@ export class MapService {
   MIN_INTENSITY_COLOR = "#d3d3d3";
   MIN_INTENSITY_THRESHOLD = 0.01;
 
-  DEFAULT_GRADIENT_THRESHOLD = 10000;
+  DEFAULT_ABS_GRADIENT_THRESHOLD = 10000;
   DEFAULT_CELL_OPACITY = 0.5;
 
   // gradientTypes - ['relative', 'absolute']
@@ -51,7 +52,7 @@ export class MapService {
 
   cellSize = this.DEFAULT_CELL_SIZE;
   gradientType = this.DEFAULT_GRADIENT;
-  gradientThreshold = this.DEFAULT_GRADIENT_THRESHOLD;
+  absGradientThreshold = this.DEFAULT_ABS_GRADIENT_THRESHOLD;
   dispersionType = this.DEFAULT_DISPERSION;
 
   maps = [];
@@ -101,18 +102,9 @@ export class MapService {
       renderer: L.canvas(), // <-- adding this doesn't seem to make much difference in performance
     });
 
-    this.map.on("click", (event) => {
-      this.addSource(event);
-    });
-
-    const tiles = L.tileLayer(
-      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }
-    );
+    // this.map.on("click", (event) => {
+    //   this.addSource(event);
+    // });
 
     // Map tile sets
     const OpenStreetMap_Map = L.tileLayer(
@@ -132,8 +124,6 @@ export class MapService {
           '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
       }
     );
-
-    tiles.addTo(this.map);
 
     const CartoDB_Voyager = L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -193,26 +183,34 @@ export class MapService {
 
   activateMap(mapID) {
     let userMap = this.studyAreas.find((a) => {
-      return a.pk === +mapID;
+      return a.pk === mapID;
     });
     if (!userMap) {
       userMap = this.maps.find((m) => {
-        return m.pk === +mapID;
+        return m.pk === mapID;
       });
       if (userMap) {
         userMap.studyArea = this.initializNewStudyArea(this.houstonPoly);
+        this.studyAreas.push({ ...userMap });
       }
     }
-    this.activeMap = userMap;
-    this.activeStudyArea = this.activeMap.studyArea;
-    this.studyAreas.push({ ...this.activeMap });
-    this.activeStudyArea.areaLayer.addTo(this.map);
-    this.map.flyToBounds(
-      this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
-    );
-    this.getActiveMapSources(mapID);
-    this.updateHeatmaps(this.activeStudyArea);
-    this.buildHeatmapLayers(this.activeStudyArea);
+
+    if (userMap) {
+      this.activeMap = userMap;
+      this.activeStudyArea = this.activeMap.studyArea;
+      this.map.flyToBounds(
+        this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
+      );
+      this.activeStudyArea.areaLayer.addTo(this.map);
+      this.getActiveMapSources(mapID);
+      this.updateHeatmaps(this.activeStudyArea);
+      this.buildHeatmapLayers(this.activeStudyArea);
+    } else {
+      console.log(`mapID ${mapID} doesn't exist!`);
+      console.log(`If you're getting this error from home.compnent`);
+      console.log(`I have no idea why, that component shouldn't ever`);
+      console.log(`call mapService.activateMap()!!`);
+    }
   }
 
   createMap(
@@ -228,10 +226,17 @@ export class MapService {
       }),
     };
     // const newMap = { name, area, shapeFile, featureList };
-    const newMap = { Name: name, City: area, Study_Area: shapeFile };
+    let newMap = { Name: name, City: area, Study_Area: shapeFile };
     return this.http
       .post<any>(environment.apiUrl + "api/maps/", newMap, options)
       .pipe(
+        tap(async () => {
+          let userMap = { ...newMap, studyArea: null };
+          userMap.studyArea = await this.initializNewStudyArea(
+            this.houstonPoly
+          );
+          this.studyAreas.push({ ...userMap });
+        }),
         catchError((err) => {
           return of({ error: "failed to add map" });
         })
@@ -524,6 +529,30 @@ export class MapService {
     );
   }
 
+  setGradientType(gradient) {
+    this.gradientType = gradient;
+
+    // TODO: update heatmaps
+  }
+
+  getGradientType() {
+    return this.gradientType;
+  }
+
+  getDefaultGradient() {
+    return this.DEFAULT_GRADIENT;
+  }
+
+  setAbsThreshold(threshold) {
+    this.absGradientThreshold = threshold;
+
+    // TODO: update heatmaps
+  }
+
+  getAbsThreshold() {
+    return this.absGradientThreshold;
+  }
+
   updateLayers(map_id: string) {
     console.log(this.layerControls);
     const layers = this.layerControls._layers;
@@ -551,9 +580,9 @@ export class MapService {
   }
 
   calculateCellColor(intensity, max_intensity, threshold, gradientType) {
-    this.gradientThreshold = threshold
+    this.absGradientThreshold = threshold
       ? threshold
-      : this.DEFAULT_GRADIENT_THRESHOLD;
+      : this.DEFAULT_ABS_GRADIENT_THRESHOLD;
     let colorIntensity = 0;
     switch (gradientType) {
       case "relative":
@@ -565,7 +594,8 @@ export class MapService {
         }
       case "absolute":
         colorIntensity =
-          (Math.log10(intensity) - Math.log10(this.gradientThreshold) + 3) / 6; // 3 & 6 are used to translate log value to 0-1; INTENSITY_LOG_RANGE?
+          (Math.log10(intensity) - Math.log10(this.absGradientThreshold) + 3) /
+          6; // 3 & 6 are used to translate log value to 0-1; INTENSITY_LOG_RANGE?
         if (colorIntensity < this.MIN_INTENSITY_THRESHOLD) {
           return this.MIN_INTENSITY_COLOR;
         } else {
@@ -578,15 +608,6 @@ export class MapService {
 
   getCellColor(intensity) {
     return d3.interpolateReds(intensity);
-  }
-
-  drawDebug(studyArea) {
-    // draw area bounding box
-    L.rectangle(this.utilityService.turfBBoxToLeafletBounds(studyArea.bbox), {
-      color: "#0000ff",
-      weight: 1,
-      fillOpacity: 0.0,
-    }).addTo(this.map);
   }
 
   // handleUpload() {
@@ -627,6 +648,7 @@ export class MapService {
   //   });
   // }
 
+  // called by the constructor to pre-load shape files
   getNolaShape(): Observable<any> {
     return this.http.get("../../assets/data/nolaPoly.json");
   }
@@ -634,4 +656,16 @@ export class MapService {
   getHoustonShape(): Observable<any> {
     return this.http.get("../../assets/data/houstonPoly.json");
   }
+
+  // const iconDefault = L.icon({
+  //   iconRetinaUrl,
+  //   iconUrl,
+  //   shadowUrl,
+  //   iconSize: [25, 41],
+  //   iconAnchor: [12, 41],
+  //   popupAnchor: [1, -34],
+  //   tooltipAnchor: [16, -28],
+  //   shadowSize: [41, 41],
+  // });
+  // L.Marker.prototype.options.icon = iconDefault;
 }

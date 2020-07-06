@@ -1,40 +1,42 @@
-<form #f="ngForm" class="form-group" (ngSubmit)="onSubmit(f)" novalidate>
-    <mat-form-field appearance="fill">
-        <mat-label>Source</mat-label>
-        <mat-select name="descrip" ngModel required #first="ngModel">
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Source</mat-label>
+    <mat-select>
+      <mat-option></mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Intensity</mat-label>
+    <input
+      matInput
+      placeholder="10000"
+      type="number"
+      name="buffer"
+      min="1"
+      max="1000000"
+      step="1000"
+    />
+    <mat-icon matSuffix>units</mat-icon>
+  </mat-form-field>
 
-            <mat-option mat-option *ngFor="let s of source" [value]="s">{{s}}</mat-option>
-        </mat-select>
-    </mat-form-field>
-    <!-- <label>Intensity</label><input type="number" name="buffer" value="10000" min="1" max="1000000" step="1000"
-            ngModel required><br> -->
-    <!-- <label>Distance(m) to 1% of Initial Intensity</label><input id="dispersionDistance" style="display:inline-block"
-            type="number" name="dispersionParameter" min="1" max="500000" step="250" value="1000" ngModel required><br> -->
+  <mat-form-field>
+    <mat-label>Distance(m) to 1% of Initial Intensity</mat-label>
+    <input
+      matInput
+      placeholder="1000"
+      type="number"
+      name="dispersionParameter"
+      min="1"
+      max="500000"
+      step="250"
+    />
+  </mat-form-field>
 
-    <!-- <label>Name</label><input id="nam" style="display:inline-block" type="text" name="name" ngModel><br> -->
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Enter source name..." name="name" />
+  </mat-form-field>
 
-    <mat-form-field appearance="fill">
-        <mat-label>Intensity</mat-label>
-        <input matInput placeholder="10000" type="number" name="buffer" min="1" max="1000000" step="1000" ngModel
-            required ngModel>
-        <mat-icon matSuffix>units</mat-icon>
-    </mat-form-field>
-
-    <mat-form-field appearance="fill">
-        <mat-label>Distance(m) to 1% of Initial Intensity</mat-label>
-        <input matInput placeholder="1000" type="number" name="dispersionParameter" min="1" max="500000" step="250"
-            ngModel required>
-    </mat-form-field>
-
-
-    <mat-form-field appearance="outline">
-        <mat-label>Name</mat-label>
-        <input matInput placeholder="Enter source name..." name="name" ngModel>
-    </mat-form-field>
-
-    <em class="text-muted">Click submit to add a hazard source</em>
-    <hr />
-    <button mat-raised-button (click)="onSubmit(f)">Submit</button>
-    <button mat-raised-button (click)="quitForm()">Cancel</button>
-
+  <em>Click submit to add a hazard source</em>
+  <button mat-raised-button (click)="quitForm()">Cancel</button>
 </form>

@@ -7,10 +7,6 @@
   }
 }
 
-.side-nav {
-  padding: 0;
-}
-
 .map-container {
   // display: flex;
   flex-direction: column;
@@ -23,11 +19,6 @@
   margin-top: flex;
 }
 
-.map-frame {
-  border: 0.5px solid black;
-  height: 100%;
-}
-
 .map-content {
   display: flex;
   flex-direction: column;
@@ -37,8 +28,13 @@
 
 #map {
   height: 100%;
+  border-top: 1px solid black;
 }
 
 mat-toolbar {
-  height: 2em;
+  height: 2rem;
+}
+
+mat-drawer {
+  padding: 1rem;
 }
