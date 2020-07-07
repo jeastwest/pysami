@@ -79,6 +79,7 @@ import { AddMapComponent } from "./home/add-map/add-map.component";
     MatTabsModule,
     MatRadioModule,
   ],
+  entryComponents: [FormComponent],
   providers: [CookieService],
   bootstrap: [AppComponent],
 })

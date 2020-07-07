@@ -39,11 +39,11 @@ export class MapComponent {
   }
 
   addFeature(): void {
-    console.log("add feature not yet implemented!");
     this.addingLocation = !this.addingLocation;
+    this.mapService.setAddingLocation(this.addingLocation);
     if (this.addingLocation) {
       this.addLocationButtonBackgroundColor = this.COLOR_ACTIVE;
-      this.snackBar.open("Click the map to add a source location!", "Close", {
+      this.snackBar.open("Click the map to add a source!", "Close", {
         // duration: 2000,
         verticalPosition: "bottom", // 'top' | 'bottom'
         // horizontalPosition: "center", //'start' | 'center' | 'end' | 'left' | 'right'

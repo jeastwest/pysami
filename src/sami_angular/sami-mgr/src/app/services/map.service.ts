@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, ComponentFactoryResolver, Injector } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import { Observable, of } from "rxjs";
@@ -15,6 +15,7 @@ import { AuthService } from "../services/auth.service";
 import { UtilityService } from "../services/utility.service";
 
 import { Source } from "../models/sources.model";
+import { FormComponent } from "../form/form.component";
 
 @Injectable({
   providedIn: "root",
@@ -75,10 +76,14 @@ export class MapService {
   private houstonPoly;
   private nolaPoly;
 
+  private addingLocation = false;
+
   constructor(
     private http: HttpClient,
     private utilityService: UtilityService,
-    private auth: AuthService
+    private auth: AuthService,
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private injector: Injector
   ) {
     this.getHoustonShape().subscribe((poly) => {
       this.houstonPoly = poly;
@@ -102,9 +107,11 @@ export class MapService {
       renderer: L.canvas(), // <-- adding this doesn't seem to make much difference in performance
     });
 
-    // this.map.on("click", (event) => {
-    //   this.addSource(event);
-    // });
+    this.map.on("click", (event) => {
+      if (this.addingLocation) {
+        this.openAddLocationPanel(event);
+      }
+    });
 
     // Map tile sets
     const OpenStreetMap_Map = L.tileLayer(
@@ -297,27 +304,6 @@ export class MapService {
       },
     });
     return studyArea;
-  }
-
-  addSource(event): Observable<any> {
-    const options = {
-      headers: new HttpHeaders({
-        Authorization: "Bearer " + this.auth.getAuthToken(),
-        "Content-Type": "application/json",
-      }),
-    };
-    const newSource = {};
-    return this.http
-      .post(environment.apiUrl + "api/sources/" + Map + "/", newSource, options)
-      .pipe(
-        timeout(5000),
-        tap((response: any) => {
-          console.log("response from /sources " + response);
-        }),
-        catchError((err) => {
-          return of({ error: "failed to add new source!" });
-        })
-      );
   }
 
   getActiveMapSources(mapID: string): Observable<any> {
@@ -551,6 +537,37 @@ export class MapService {
 
   getAbsThreshold() {
     return this.absGradientThreshold;
+  }
+
+  setAddingLocation(addingLocation) {
+    this.addingLocation = addingLocation;
+  }
+
+  openAddLocationPanel(event) {
+    const marker = L.marker(event.latlng).addTo(this.map);
+    marker
+      .bindPopup(() => this.createCustomPopup(), {
+        closeButton: false,
+      })
+      .openPopup();
+  }
+  private createCustomPopup() {
+    const factory = this.componentFactoryResolver.resolveComponentFactory(
+      FormComponent
+    );
+    const component = factory.create(this.injector);
+
+    //Set the component inputs manually
+    // component.instance.sourceTypes = this.utilityService.getSourceTypes();
+    // component.instance.someinput2 = "example";
+
+    //Subscribe to the components outputs manually (if any)
+    // component.instance.someoutput.subscribe(() => console.log("output handler fired"));
+
+    //Manually invoke change detection, automatic wont work, but this is Ok if the component doesn't change
+    component.changeDetectorRef.detectChanges();
+
+    return component.location.nativeElement;
   }
 
   updateLayers(map_id: string) {
