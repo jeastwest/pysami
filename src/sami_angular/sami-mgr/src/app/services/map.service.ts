@@ -104,7 +104,7 @@ export class MapService {
       zoomControl: true,
       preferCanvas: true,
       visualClickEvents: "click contextmenu",
-      renderer: L.canvas(), // <-- adding this doesn't seem to make much difference in performance
+      renderer: L.canvas(), // <-- at the time, adding this doesn't seem to make much difference in performance
     });
 
     this.map.on("click", (event) => {
@@ -545,26 +545,19 @@ export class MapService {
 
   openAddLocationPanel(event) {
     const marker = L.marker(event.latlng).addTo(this.map);
+    const popup = this.createCustomPopup(marker);
     marker
-      .bindPopup(() => this.createCustomPopup(), {
+      .bindPopup(popup, {
         closeButton: false,
       })
       .openPopup();
   }
-  private createCustomPopup() {
+  private createCustomPopup(marker) {
     const factory = this.componentFactoryResolver.resolveComponentFactory(
       FormComponent
     );
     const component = factory.create(this.injector);
-
-    //Set the component inputs manually
-    // component.instance.sourceTypes = this.utilityService.getSourceTypes();
-    // component.instance.someinput2 = "example";
-
-    //Subscribe to the components outputs manually (if any)
-    // component.instance.someoutput.subscribe(() => console.log("output handler fired"));
-
-    //Manually invoke change detection, automatic wont work, but this is Ok if the component doesn't change
+    component.instance.locationMarker = marker;
     component.changeDetectorRef.detectChanges();
 
     return component.location.nativeElement;

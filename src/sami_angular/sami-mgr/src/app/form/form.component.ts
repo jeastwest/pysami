@@ -1,8 +1,7 @@
 import { Component } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 import { UploaderService } from "../services/uploader.service";
-import { UtilityService } from "../services/utility.service";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: "app-form",
@@ -11,11 +10,11 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 })
 export class FormComponent {
   sourceForm: FormGroup;
-  sourceTypes;
+
+  locationMarker;
 
   constructor(
     private uploaderService: UploaderService,
-    private utilityService: UtilityService,
     private fb: FormBuilder
   ) {}
 
@@ -25,13 +24,12 @@ export class FormComponent {
       sourceType: [null, Validators.required],
       intensity: [null, Validators.required],
       distance: [null, Validators.required],
+      lat: [this.locationMarker._latlng.lat, Validators.required],
+      lng: [this.locationMarker._latlng.lng, Validators.required],
     });
-
-    this.sourceTypes = this.utilityService.getSourceTypes();
   }
 
-  addSource(event) {
-    console.log(event.latlng);
+  addSource() {
     if (this.sourceForm.valid) {
       this.uploaderService
         .addSource({
@@ -39,6 +37,8 @@ export class FormComponent {
           sourceType: this.sourceForm.get("sourceType").value,
           intensity: this.sourceForm.get("intensity").value,
           distance: this.sourceForm.get("distance").value,
+          lat: this.sourceForm.get("lat").value,
+          lng: this.sourceForm.get("lng").value,
         })
         .subscribe((result) => {
           console.log(result);
@@ -49,5 +49,8 @@ export class FormComponent {
     }
   }
 
-  quitForm() {}
+  quitForm() {
+    this.locationMarker.closePopup();
+    this.locationMarker.remove();
+  }
 }

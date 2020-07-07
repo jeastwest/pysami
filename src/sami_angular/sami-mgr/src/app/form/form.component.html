@@ -41,9 +41,19 @@
       formControlName="distance"
     />
   </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="lat">Lat</mat-label>
+    <input matInput name="lat" formControlName="lat" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="lng">Lng</mat-label>
+    <input matInput name="lng" formControlName="lng" />
+  </mat-form-field>
 </form>
 <div class="form-controls">
-  <button mat-raised-button (click)="addSource($event)" class="form-control">
+  <button mat-raised-button (click)="addSource()" class="form-control">
     Click submit to add a hazard source
   </button>
   <button mat-raised-button (click)="quitForm()" class="form-control">
