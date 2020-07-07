@@ -4,24 +4,19 @@
     <input matInput type="text" formControlName="name" />
   </mat-form-field>
 
-  <!-- <mat-form-field appearance="fill">
-    <mat-label>Cars</mat-label>
-    <select matNativeControl>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
-    </select>
-  </mat-form-field> -->
-
   <mat-form-field>
+    <mat-label>Source</mat-label>
+    <input matInput type="text" formControlName="sourceType" />
+  </mat-form-field>
+
+  <!-- <mat-form-field>
     <mat-label for="type">Source</mat-label>
     <mat-select name="type" formControlName="sourceType">
       <mat-option *ngFor="let source of sourceTypes" [value]="source"
         >source</mat-option
       >
     </mat-select>
-  </mat-form-field>
+  </mat-form-field> -->
 
   <mat-form-field>
     <mat-label for="intensity">Intensity</mat-label>
@@ -48,7 +43,7 @@
   </mat-form-field>
 </form>
 <div class="form-controls">
-  <button mat-raised-button (click)="addSource()" class="form-control">
+  <button mat-raised-button (click)="addSource($event)" class="form-control">
     Click submit to add a hazard source
   </button>
   <button mat-raised-button (click)="quitForm()" class="form-control">

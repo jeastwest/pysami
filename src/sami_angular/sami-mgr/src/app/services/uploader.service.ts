@@ -14,14 +14,15 @@ import { AuthService } from "../services/auth.service";
 export class UploaderService {
   constructor(private http: HttpClient, private auth: AuthService) {}
 
-  addSource(event): Observable<any> {
+  addSource(source): Observable<any> {
+    console.log(source);
     const options = {
       headers: new HttpHeaders({
         Authorization: "Bearer " + this.auth.getAuthToken(),
         "Content-Type": "application/json",
       }),
     };
-    const newSource = {};
+    const newSource = { ...source };
     return this.http
       .post(environment.apiUrl + "api/sources/" + Map + "/", newSource, options)
       .pipe(
@@ -33,9 +34,5 @@ export class UploaderService {
           return of({ error: "failed to add new source!" });
         })
       );
-  }
-
-  testAddSource() {
-    console.log("ADD SOURCE TEST PASSED!");
   }
 }

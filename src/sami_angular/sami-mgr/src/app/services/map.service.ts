@@ -545,7 +545,11 @@ export class MapService {
 
   openAddLocationPanel(event) {
     const marker = L.marker(event.latlng).addTo(this.map);
-    marker.bindPopup(() => this.createCustomPopup()).openPopup();
+    marker
+      .bindPopup(() => this.createCustomPopup(), {
+        closeButton: false,
+      })
+      .openPopup();
   }
   private createCustomPopup() {
     const factory = this.componentFactoryResolver.resolveComponentFactory(

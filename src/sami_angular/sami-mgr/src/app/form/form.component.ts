@@ -28,11 +28,25 @@ export class FormComponent {
     });
 
     this.sourceTypes = this.utilityService.getSourceTypes();
-    console.log("init form!");
   }
 
-  addSource() {
-    this.uploaderService.testAddSource();
+  addSource(event) {
+    console.log(event.latlng);
+    if (this.sourceForm.valid) {
+      this.uploaderService
+        .addSource({
+          name: this.sourceForm.get("name").value,
+          sourceType: this.sourceForm.get("sourceType").value,
+          intensity: this.sourceForm.get("intensity").value,
+          distance: this.sourceForm.get("distance").value,
+        })
+        .subscribe((result) => {
+          console.log(result);
+        });
+    } else {
+      // this needs some error messaging
+      return;
+    }
   }
 
   quitForm() {}
