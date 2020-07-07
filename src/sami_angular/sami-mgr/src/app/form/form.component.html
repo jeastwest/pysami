@@ -1,42 +1,57 @@
-<form>
-  <mat-form-field appearance="fill">
-    <mat-label>Source</mat-label>
-    <mat-select>
-      <mat-option></mat-option>
-    </mat-select>
-  </mat-form-field>
-  <mat-form-field>
-    <mat-label>Intensity</mat-label>
-    <input
-      matInput
-      placeholder="10000"
-      type="number"
-      name="buffer"
-      min="1"
-      max="1000000"
-      step="1000"
-    />
-    <mat-icon matSuffix>units</mat-icon>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-label>Distance(m) to 1% of Initial Intensity</mat-label>
-    <input
-      matInput
-      placeholder="1000"
-      type="number"
-      name="dispersionParameter"
-      min="1"
-      max="500000"
-      step="250"
-    />
-  </mat-form-field>
-
+<form [formGroup]="sourceForm">
   <mat-form-field>
     <mat-label>Name</mat-label>
-    <input matInput placeholder="Enter source name..." name="name" />
+    <input matInput type="text" formControlName="name" />
   </mat-form-field>
 
-  <em>Click submit to add a hazard source</em>
-  <button mat-raised-button (click)="quitForm()">Cancel</button>
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Cars</mat-label>
+    <select matNativeControl>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+  </mat-form-field> -->
+
+  <mat-form-field>
+    <mat-label for="type">Source</mat-label>
+    <mat-select name="type" formControlName="sourceType">
+      <mat-option *ngFor="let source of sourceTypes" [value]="source"
+        >source</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="intensity">Intensity</mat-label>
+    <input
+      matInput
+      type="number"
+      min="1"
+      max="1000000"
+      name="intensity"
+      formControlName="intensity"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="distance">Distance(m) to 1% of Initial Intensity</mat-label>
+    <input
+      matInput
+      type="number"
+      min="1"
+      max="500000"
+      name="distance"
+      formControlName="distance"
+    />
+  </mat-form-field>
 </form>
+<div class="form-controls">
+  <button mat-raised-button (click)="addSource()" class="form-control">
+    Click submit to add a hazard source
+  </button>
+  <button mat-raised-button (click)="quitForm()" class="form-control">
+    Cancel
+  </button>
+</div>

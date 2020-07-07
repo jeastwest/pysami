@@ -15,12 +15,18 @@ export class UtilityService {
   public sources: Source[] = [];
   constructor(private http: HttpClient) {}
 
+  SOURCE_TYPES = ["School", "Hospital", "WW Treatment", "Cemetery"];
+
   // build custom icons
   public hazmatIcon = L.icon({
     iconUrl: "./icons/hazmat.png",
     iconSize: [22, 22],
     iconAnchor: [11, 11],
   });
+
+  getSourceTypes() {
+    return this.SOURCE_TYPES;
+  }
 
   // helper function to convert a turf.js bounding box to a leaflet.js bounds object
   turfBBoxToLeafletBounds(turf_bbox) {
