@@ -96,7 +96,7 @@ At this point all requirements should be installed.
 - You can now navigate a browser to `localhost:4200`
 
 
-### Deployment:
+### Build for Deployment:
 
 In order for pysami (Django) to be able to serve the angular files they need to be built first.
 
