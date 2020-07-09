@@ -58,8 +58,7 @@ A fairly efficient development setup for a Windows 10 machine is as follows:
 
   > `(sami) ..\sami_angular\sami-mgr>npm install`
 
-
-At this point all requirements should be installed.
+- At this point all requirements should be installed.
 
 
 #### Start the Django server:
@@ -91,9 +90,9 @@ At this point all requirements should be installed.
 
 > `C:\Users\user>cd ws-sami\pysami\src\sami_angular\sami-mgr>npx ng serve`
 
-- This will start the Angular development server on port 4200.
+- This will start the Angular development server and compile the dev build files.
 
-- You can now navigate a browser to `localhost:4200`
+- Once complete, you can navigate a browser to `localhost:4200`
 
 
 ### Build for Deployment:
@@ -105,7 +104,7 @@ In order for pysami (Django) to be able to serve the angular files they need to 
 
   > `(sami) ..\sami-mgr>npx ng build --prod --output-path C:\Users\user\ws-sami\pysami\src\static --watch --output-hashing none`
 
-The npx command tells node to use the angular version installed in the node_modules folder instead of a globaly installed one.
+The npx command tells node to use the angular version installed in the node_modules folder for this project, instead of a globaly installed one.
 
 These are the optional flag definitions:
 
@@ -115,4 +114,4 @@ These are the optional flag definitions:
 - `--watch` starts a file monitor which reruns this build command if any of the source files change, basically hot-reloading
 - `--output-hashing none` instructs the compiler not to append the file names with the file's hash (**this one is important, if the hash is not left _off_, django won't know how to find the correct files**)
 
-(I usually issue this command from the terminal in VS Code, so I can monitor the build log when I update code)
+(This command can be issued from a separate terminal, than the django server, to allow for monitoring of build logging when code is updated)
