@@ -306,6 +306,16 @@ export class MapService {
     return studyArea;
   }
 
+  getActiveMapMeta() {
+    console.log(this.activeMap);
+    return {
+      mapName: this.activeMap.name,
+      area: this.activeMap.area,
+      shapeFilePath: this.activeMap.shapeFile,
+      featuresFilePath: this.activeMap.featuresFilePath,
+    };
+  }
+
   getActiveMapSources(mapID: string): Observable<any> {
     const options = {
       headers: new HttpHeaders({

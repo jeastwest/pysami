@@ -1,4 +1,8 @@
 <mat-card>
+  <p>Map Name: {{ mapName }}</p>
+  <p>Study Area: {{ area }}</p>
+  <p>Shape File: {{ shapeFilePath }}</p>
+  <p>Features File: {{ featuresFilePath }}</p>
   <form [formGroup]="gradientForm" class="gradient-form">
     <mat-card-content>
       <h4>Color Scaling Factor:</h4>

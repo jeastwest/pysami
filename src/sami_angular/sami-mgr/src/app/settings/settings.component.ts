@@ -11,9 +11,20 @@ import { MapService } from "../services/map.service";
 export class SettingsComponent implements OnInit {
   gradientForm: FormGroup;
 
+  mapName;
+  area;
+  shapeFilePath;
+  featuresFilePath;
+
   constructor(private mapService: MapService, private fb: FormBuilder) {}
 
   ngOnInit() {
+    const mapMetaData = this.mapService.getActiveMapMeta();
+    console.log(mapMetaData);
+    this.mapName = mapMetaData.mapName;
+    this.area = mapMetaData.area;
+    this.shapeFilePath = mapMetaData.shapeFilePath;
+    this.featuresFilePath = mapMetaData.featuresFilePath;
     this.gradientForm = this.fb.group({
       gradientType: new FormControl(this.getGradientType(), null),
       absThreshold: new FormControl(this.mapService.getAbsThreshold(), null),
