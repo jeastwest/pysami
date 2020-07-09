@@ -1,0 +1,13 @@
+<div class="box">
+  <div class="row-header">
+    <app-header></app-header>
+  </div>
+  <div class="row-content">
+    <ng-container *ngIf="userIsAuthenticated()">
+      <router-outlet></router-outlet>
+    </ng-container>
+    <ng-container *ngIf="!userIsAuthenticated()">
+      <app-login></app-login>
+    </ng-container>
+  </div>
+</div>

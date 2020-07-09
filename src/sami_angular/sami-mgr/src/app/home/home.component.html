@@ -1,0 +1,49 @@
+<div class="map-menu">
+  <ng-container *ngFor="let map of maps">
+    <div class="map-item">
+      <mat-card>
+        <mat-card-content>
+          <h1>{{ map.Name }}</h1>
+          <p>{{ map.City }}</p>
+          <p>{{ map.shapeFile }}</p>
+          <p>{{ map.featureFile }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="gotoSelectedMap(map.pk)">
+            View map
+          </button>
+          <button mat-raised-button (click)="deleteMap(map.pk)">
+            Delete map
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="!addingMap">
+    <div class="map-item">
+      <mat-card>
+        <mat-card-content (click)="addMap()">
+          <div class="add-map">
+            <h1>Add Map</h1>
+            <h1>+</h1>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="addingMap">
+    <div class="map-item">
+      <mat-card>
+        <mat-card-content>
+          <app-add-map></app-add-map>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button type="button" (click)="cancel()">
+            cancel
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </ng-container>
+</div>

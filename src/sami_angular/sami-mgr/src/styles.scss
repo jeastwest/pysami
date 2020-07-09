@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900");
+@import url("https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(to top left, #002137, #197ec0);
+}
+
+.legend-info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: rgba(231, 231, 231, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.legend-info h4 {
+  color: #000;
+  margin: 0;
+}
+
+.legend {
+  line-height: 18px;
+}
+
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.navselect {
+  z-index: 999;
+  position: absolute;
+  background-color: white;
+  left: 30%;
+  top: 0;
+}
+
+.add-location-snackbar {
+  padding: 0 auto;
+  background-color: #197ec0;
+  color: whitesmoke;
+}

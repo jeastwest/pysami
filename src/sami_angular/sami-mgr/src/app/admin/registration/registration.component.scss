@@ -1,0 +1,58 @@
+.mat-card {
+  max-width: 404px;
+  background: whitesmoke;
+}
+
+@media (max-width: 675px) {
+  .mat-card {
+    min-width: 208px;
+    max-width: 208px;
+  }
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25em;
+}
+
+.task-detail {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+}
+
+.control {
+  margin-left: 1em;
+  margin-right: 1em;
+  color: white;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 1.25em;
+  margin-bottom: 2em;
+}
+
+.mat-raised-button {
+  background-color: blue;
+  margin-top: 10px;
+
+  &:hover{
+    background-color:darken(blue, 20%);
+  } 
+
+}
+.mat-form-field {
+  margin: 10px;
+}
+
+.mat-spinner {
+  margin: 15px auto;
+}
+
+.statusMessage {
+  margin-top: 1em;
+  text-align: center;
+}

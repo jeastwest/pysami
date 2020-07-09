@@ -1,0 +1,25 @@
+#header {
+  color: whitesmoke;
+}
+
+#app-name {
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+#version-number {
+  font-size: 0.75rem;
+  display: inline-block;
+}
+
+.name {
+  line-height: 1em;
+}
+
+.bold-yellow {
+  font-weight: bold;
+  font-size: 3rem;
+  color: yellow;
+}

@@ -1,0 +1,37 @@
+.map-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.map-item {
+  display: flex;
+  flex-flow: column;
+  align-self: center;
+  background: gray;
+  width: 300px;
+  min-height: 200px;
+  border-radius: 5px;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  margin: 1rem;
+  box-shadow: -2px -2px 2px #1a5a77, 20px 20px 20px #1a5a77;
+}
+
+.map-item:hover {
+  background: rgb(161, 161, 161);
+  box-shadow: -1px -1px 1px #1a5a77, 10px 10px 10px #1a5a77;
+}
+
+.add-map {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 730px) {
+  .map-menu {
+    grid-template-columns: repeat(1, minmax(320px, 1fr));
+  }
+}

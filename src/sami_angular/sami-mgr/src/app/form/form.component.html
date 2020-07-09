@@ -1,0 +1,62 @@
+<form [formGroup]="sourceForm">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Source</mat-label>
+    <input matInput type="text" formControlName="sourceType" />
+  </mat-form-field>
+
+  <!-- <mat-form-field>
+    <mat-label for="type">Source</mat-label>
+    <mat-select name="type" formControlName="sourceType">
+      <mat-option *ngFor="let source of sourceTypes" [value]="source"
+        >source</mat-option
+      >
+    </mat-select>
+  </mat-form-field> -->
+
+  <mat-form-field>
+    <mat-label for="intensity">Intensity</mat-label>
+    <input
+      matInput
+      type="number"
+      min="1"
+      max="1000000"
+      name="intensity"
+      formControlName="intensity"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="distance">Distance(m) to 1% of Initial Intensity</mat-label>
+    <input
+      matInput
+      type="number"
+      min="1"
+      max="500000"
+      name="distance"
+      formControlName="distance"
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="lat">Lat</mat-label>
+    <input matInput name="lat" formControlName="lat" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="lng">Lng</mat-label>
+    <input matInput name="lng" formControlName="lng" />
+  </mat-form-field>
+</form>
+<div class="form-controls">
+  <button mat-raised-button (click)="addSource()" class="form-control">
+    Click submit to add a hazard source
+  </button>
+  <button mat-raised-button (click)="quitForm()" class="form-control">
+    Cancel
+  </button>
+</div>

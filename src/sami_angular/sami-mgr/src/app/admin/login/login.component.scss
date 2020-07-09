@@ -1,0 +1,65 @@
+
+.mat-card {
+  min-width: 200px;
+  max-width: 200px;
+  background: whitesmoke;
+  margin-bottom: 3em;
+}
+
+.mat-centered {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-raised-button {
+  background-color: blue;
+  margin-top: 10px;
+
+  &:hover{
+    background-color:darken(blue, 20%);
+  } 
+
+}
+
+
+.mat-form-field {
+  margin: 10px;
+}
+
+.centered {
+  display: inline-block;
+  width: 100%;
+}
+
+.login {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+  margin-bottom: 20em;
+}
+
+.control {
+  margin: 5px;
+  color: white;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 1.25em;
+  margin-bottom: 2em;
+}
+
+.spacer {
+  flex: 1 1 auto;
+  min-width: 1em;
+}
+
+.mat-spinner {
+  margin: 15px auto;
+}
+
+.errorMessage {
+  margin-bottom: 10px;
+}

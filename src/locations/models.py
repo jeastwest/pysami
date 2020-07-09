@@ -1,14 +1,20 @@
 import datetime
+import uuid
 from django.conf import settings
 from django.db import models
 from django.urls import reverse
 
 # Create your models here.
 class Map(models.Model):
-	Added_by	=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	Name		=models.TextField()
-	City		=models.TextField()
-	Study_area	=models.TextField()
+	id  			=models.UUIDField(primary_key=True)
+	Added_by		=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	mapName		 	=models.TextField(default="")
+	area 		 	=models.TextField(default="")
+	shapeFile		=models.TextField(default="")
+	shapeFileData	=models.TextField(default="") 
+	featuresFile 	=models.TextField(default="")
+	featuresFileData=models.TextField(default="")
+	studyArea		=models.TextField(default="")
 
 	def __str__(self):
 		return f'{self.Name}'

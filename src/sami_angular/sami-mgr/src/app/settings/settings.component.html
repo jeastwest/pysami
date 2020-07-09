@@ -1,0 +1,58 @@
+<mat-card>
+  <p>Map Name: {{ mapName }}</p>
+  <p>Study Area: {{ area }}</p>
+  <p>Shape File: {{ shapeFilePath }}</p>
+  <p>Features File: {{ featuresFilePath }}</p>
+  <form [formGroup]="gradientForm" class="gradient-form">
+    <mat-card-content>
+      <h4>Color Scaling Factor:</h4>
+      <div class="abs-radio-button">
+        <mat-label>Relative</mat-label>
+        <input
+          type="radio"
+          name="gradientType"
+          id="relative"
+          value="relative"
+          formControlName="gradientType"
+          (click)="setGradientType('relative')"
+        />
+      </div>
+      <div class="abs-radio-button">
+        <mat-label>Absoulte</mat-label>
+        <input
+          type="radio"
+          name="gradientType"
+          id="absolute"
+          value="absolute"
+          formControlName="gradientType"
+          (click)="setGradientType('absolute')"
+        />
+      </div>
+      <ng-container *ngIf="getGradientType() === 'absolute'">
+        <h4>Abs Upper Threshold:</h4>
+        <div class="abs-threshold-input">
+          <input
+            matInput
+            id=" absGradient"
+            type="number"
+            name="absThreshold"
+            value="10000"
+            min="1"
+            max="50000"
+            formControlName="absThreshold"
+            class="abs-input"
+          />
+          <button
+            mat-raised-button
+            type="button"
+            id="set-abs-threshold"
+            (click)="setGradientAbsThreshold()"
+            class="abs-input-button"
+          >
+            Set Threshold
+          </button>
+        </div>
+      </ng-container>
+    </mat-card-content>
+  </form>
+</mat-card>
