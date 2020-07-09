@@ -64,9 +64,11 @@ At this point all requirements should be installed.
 
 #### Start the Django server:
 
-- navigate to the pysami project src folder:
+- Activate the environment, if not already:
 
 > `(base) C:\Users\user>conda activate sami`
+
+- navigate to the pysami project src folder:
 
 > `(sami) C:\Users\user>cd ws-sami/pysami/src`
 
@@ -80,7 +82,7 @@ At this point all requirements should be installed.
 
 - You can now navigate a browser to `localhost:8000`
 
-- Until you build the Angular files and deploy them to the correct directory (see below), only the API will be available
+- **_Until you build the Angular files and deploy them to the correct directory (see below), only the API will be available_**
 
 
 #### Start the Angular development server:
