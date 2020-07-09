@@ -44,7 +44,7 @@ A fairly efficient development setup for a Windows 10 machine is as follows:
 
 - `cd` into the project's src folder:
 
-  > `(sami) C:\Users\user\ws-sami>cd pysami\src`
+  > `(sami) ..\ws-sami>cd pysami\src`
 
 - Install the python dependencies (this might take a while):
 
