@@ -113,6 +113,6 @@ These are the optional flag definitions:
 - `--prod` instructs the compiler to build a production version of the Angular app
 - `--output-path` tells the compiler where to save the built files
 - `--watch` starts a file monitor which reruns this build command if any of the source files change, basically hot-reloading
-- `--output-hashing none` instructs the compiler not to append the file names with the file's hash
+- `--output-hashing none` instructs the compiler not to append the file names with the file's hash (**this one is important, if the hash is not left _off_, django won't know how to find the correct files**)
 
 (I usually issue this command from the terminal in VS Code, so I can monitor the build log when I update code)
