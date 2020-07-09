@@ -1,9 +1,7 @@
 # **pysami**
-
 Django backend for sami web tool with Angular frontend served as a SPA (single-page-application) from Django.
 
 ## About
-
 Deployable stack for serving the SAMI web-app.
 
 
@@ -107,7 +105,6 @@ In order for pysami (Django) to be able to serve the angular files they need to 
 
 The npx command tells node to use the angular version installed in the node_modules folder instead of a globaly installed one.
 
-
 These are the optional flag definitions:
 
 - `ng build` is the standard angular build command
@@ -116,4 +113,4 @@ These are the optional flag definitions:
 - `--watch` starts a file monitor which reruns this build command if any of the source files change, basically hot-reloading
 - `--output-hashing none` instructs the compiler not to append the file names with the file's hash
 
-- (I usually issue this command from the terminal in VS Code, so I can monitor the build log when I update code)
+(I usually issue this command from the terminal in VS Code, so I can monitor the build log when I update code)
