@@ -23,7 +23,7 @@ class GroupSerializer(serializers.ModelSerializer):
 class MapSerializer(serializers.ModelSerializer):
     class Meta:
         model = Map
-        fields = ['pk', 'Name', 'City', 'Study_area']
+        fields = ['id', 'Added_by', 'MapName', 'area','shapeFile', 'shapeFileData','featuresFile','featuresFileData','studyArea']
 
 class SourceSerializer(serializers.ModelSerializer):
     class Meta:
