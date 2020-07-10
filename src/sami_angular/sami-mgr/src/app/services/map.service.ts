@@ -49,7 +49,7 @@ export class MapService {
   DISPERSION_EXP = Math.log(100);
   DISPERSION_LIN = 0.99;
 
-  maxIntensity = [];
+  max_intensity = [];
 
   cellSize = this.DEFAULT_CELL_SIZE;
   gradientType = this.DEFAULT_GRADIENT;
@@ -215,10 +215,10 @@ export class MapService {
         this.addLocationsToMap(this.activeStudyArea); // builds and adds leaflet markers for source locations
       });
     } else {
-      console.log(`mapID ${mapID} doesn't exist!`);
-      console.log(`If you're getting this error from home.compnent`);
-      console.log(`I have no idea why, that component shouldn't ever`);
-      console.log(`call mapService.activateMap()!!`);
+      console.log(`mapID ${mapID} doesn't exist!
+      If you're getting this error from home.compnent
+      I have no idea why, that component shouldn't ever
+      call mapService.activateMap()!!`);
     }
   }
 
@@ -419,7 +419,7 @@ export class MapService {
           this.COORD_OPTIONS
         );
         const dispersedIntensity =
-          hazard.Intensity * Math.exp(-dispersionFactor * distance);
+          hazard.intensity * Math.exp(-dispersionFactor * distance);
         heatmap_exp.intensity[i] += dispersedIntensity;
       }
     }
@@ -449,6 +449,13 @@ export class MapService {
   buildHeatmapLayers(studyArea) {
     const heatmap_base = studyArea.heatmaps.heatmap_base;
     const heatmap_exp = studyArea.heatmaps.heatmap_exp;
+
+    // remove current exponential layer from map
+    const layer_exp = heatmap_exp.heatmapLayer;
+    if (layer_exp) {
+      this.updateLayerControls([{ "Exponential Heatmap": layer_exp }], true);
+    }
+
     const heatmapExpLayer = L.layerGroup();
     for (let i = 0; i < studyArea.cellsWithinStudyArea.length; i++) {
       const cell = studyArea.cellsWithinStudyArea[i];
@@ -456,13 +463,11 @@ export class MapService {
 
       if (
         intensity >
-        heatmap_base.maxIntensity * this.MIN_INTENSITY_THRESHOLD
+        heatmap_base.max_intensity * this.MIN_INTENSITY_THRESHOLD
       ) {
-        // const cellColor = this.getCellColor(intensity / maxIntensity);
         const cellColor = this.calculateCellColor(
           intensity,
-          heatmap_base.maxIntensity,
-          null,
+          heatmap_base.max_intensity,
           this.gradientType
         );
         const c = L.rectangle(
@@ -484,6 +489,12 @@ export class MapService {
     heatmap_exp.heatmapLayer.addTo(this.map);
 
     const heatmap_lin = studyArea.heatmaps.heatmap_lin;
+    // remove current linear layer from map
+    const layer_lin = heatmap_lin.heatmapLayer;
+    if (layer_lin) {
+      this.updateLayerControls([{ "Linear Heatmap": layer_lin }], true);
+    }
+
     const heatmapLinLayer = L.layerGroup();
     for (let i = 0; i < studyArea.cellsWithinStudyArea.length; i++) {
       const cell = studyArea.cellsWithinStudyArea[i];
@@ -491,13 +502,12 @@ export class MapService {
 
       if (
         intensity >
-        heatmap_base.maxIntensity * this.MIN_INTENSITY_THRESHOLD
+        heatmap_base.max_intensity * this.MIN_INTENSITY_THRESHOLD
       ) {
-        // const cellColor = this.getCellColor(intensity / maxIntensity);
+        // const cellColor = this.getCellColor(intensity / max_intensity);
         const cellColor = this.calculateCellColor(
           intensity,
-          heatmap_base.maxIntensity,
-          null,
+          heatmap_base.max_intensity,
           this.gradientType
         );
         const c = L.rectangle(
@@ -526,32 +536,17 @@ export class MapService {
     );
   }
 
-  setGradientType(gradient) {
-    this.gradientType = gradient;
-
-    // TODO: update heatmaps
-  }
-
-  getGradientType() {
-    return this.gradientType;
-  }
-
-  getDefaultGradient() {
-    return this.DEFAULT_GRADIENT;
-  }
-
-  setAbsThreshold(threshold) {
-    this.absGradientThreshold = threshold;
-
-    // TODO: update heatmaps
-  }
-
-  getAbsThreshold() {
-    return this.absGradientThreshold;
-  }
-
-  setaddingSource(addingSource) {
-    this.addingSource = addingSource;
+  updateLayerControls(layers, r) {
+    const remove = r || false;
+    for (let layer of layers) {
+      let keys = Object.keys(layer);
+      if (remove) {
+        this.layerControls.removeLayer(layer[keys[0]]);
+        this.map.removeLayer(layer[keys[0]]);
+      } else {
+        this.layerControls.addOverlay(layer[keys[0]], keys[0]);
+      }
+    }
   }
 
   openAddLocationPanel(event) {
@@ -575,36 +570,7 @@ export class MapService {
     return component.location.nativeElement;
   }
 
-  updateLayers(map_id: string) {
-    console.log(this.layerControls);
-    const layers = this.layerControls._layers;
-    const overlaysToBeRemoved = [];
-    for (let layer of layers) {
-      console.log(layers);
-      if (layer.overlay) {
-        overlaysToBeRemoved.push(layer.layer);
-      }
-    }
-    this.updateLayerControls(overlaysToBeRemoved, true);
-  }
-
-  updateLayerControls(layers, r) {
-    const remove = r || false;
-    for (let layer of layers) {
-      let keys = Object.keys(layer);
-      if (remove) {
-        this.layerControls.removeLayer(layer);
-        this.map.removeLayer(layer);
-      } else {
-        this.layerControls.addOverlay(layer[keys[0]], keys[0]);
-      }
-    }
-  }
-
-  calculateCellColor(intensity, max_intensity, threshold, gradientType) {
-    this.absGradientThreshold = threshold
-      ? threshold
-      : this.DEFAULT_ABS_GRADIENT_THRESHOLD;
+  calculateCellColor(intensity, max_intensity, gradientType) {
     let colorIntensity = 0;
     switch (gradientType) {
       case "relative":
@@ -628,47 +594,35 @@ export class MapService {
     }
   }
 
+  setGradientType(gradient) {
+    this.gradientType = gradient;
+    this.buildHeatmapLayers(this.activeStudyArea);
+  }
+
+  getGradientType() {
+    return this.gradientType;
+  }
+
+  getDefaultGradient() {
+    return this.DEFAULT_GRADIENT;
+  }
+
+  setAbsThreshold(threshold) {
+    this.absGradientThreshold = threshold;
+    this.buildHeatmapLayers(this.activeStudyArea);
+  }
+
+  getAbsThreshold() {
+    return this.absGradientThreshold;
+  }
+
+  setaddingSource(addingSource) {
+    this.addingSource = addingSource;
+  }
+
   getCellColor(intensity) {
     return d3.interpolateReds(intensity);
   }
-
-  // handleUpload() {
-  //   const file = document.getElementById('inputFeatureFile').files[0];
-  //   if (file) {
-  //     const reader = new FileReader();
-  //     reader.onload = function () {
-  //       if (reader.result) {
-  //         result = JSON.parse(reader.result);
-  //       }
-  //     };
-  //   } else {
-  //     console.log('no file selected!');
-  //   }
-  // }
-
-  // Unused highlight feature
-
-  // private highlightFeature(e) {
-  //   const layer = e.target;
-  //   layer.setStyle({
-  //     weight: 10,
-  //     opacity: 1.0,
-  //     color: '#DFA612',
-  //     fillOpacity: 1.0,
-  //     fillColor: '#FAE042',
-  //   });
-  // }
-
-  // private resetFeature(e) {
-  //   const layer = e.target;
-  //   layer.setStyle({
-  //     weight: 3,
-  //     opacity: 0.5,
-  //     color: '#008f68',
-  //     fillOpacity: 0.8,
-  //     fillColor: '#6DB65B'
-  //   });
-  // }
 
   // called by the constructor to pre-load shape files
   getNolaShape(): Observable<any> {
@@ -678,16 +632,4 @@ export class MapService {
   getHoustonShape(): Observable<any> {
     return this.http.get("../../assets/data/houstonPoly.json");
   }
-
-  // const iconDefault = L.icon({
-  //   iconRetinaUrl,
-  //   iconUrl,
-  //   shadowUrl,
-  //   iconSize: [25, 41],
-  //   iconAnchor: [12, 41],
-  //   popupAnchor: [1, -34],
-  //   tooltipAnchor: [16, -28],
-  //   shadowSize: [41, 41],
-  // });
-  // L.Marker.prototype.options.icon = iconDefault;
 }

@@ -7,7 +7,6 @@ import { timeout, catchError, tap } from "rxjs/operators";
 import { environment } from "src/environments/environment";
 
 import { AuthService } from "../services/auth.service";
-import { MapService } from "./map.service";
 
 @Injectable({
   providedIn: "root",

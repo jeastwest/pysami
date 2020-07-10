@@ -45,7 +45,7 @@ export class MapComponent {
     if (this.addingSource) {
       this.addLocationButtonBackgroundColor = this.COLOR_ACTIVE;
       this.snackBar.open("Click the map to add a source!", "Close", {
-        // duration: 2000,
+        duration: 5000,
         verticalPosition: "bottom", // 'top' | 'bottom'
         // horizontalPosition: "center", //'start' | 'center' | 'end' | 'left' | 'right'
         panelClass: "add-location-snackbar", // expects class to be in styles.scss

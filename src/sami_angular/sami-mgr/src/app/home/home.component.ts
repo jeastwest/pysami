@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 
 import { MapService } from "../services/map.service";
@@ -8,14 +8,12 @@ import { MapService } from "../services/map.service";
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   maps: any;
 
   addingMap = false;
 
-  constructor(private router: Router, private mapService: MapService) {}
-
-  ngOnInit(): void {
+  constructor(private router: Router, private mapService: MapService) {
     this.getMaps();
   }
 
@@ -23,8 +21,9 @@ export class HomeComponent implements OnInit {
     this.addingMap = true;
   }
 
-  gotoSelectedMap(id: string) {
-    this.router.navigateByUrl(`/map/${id}`);
+  gotoSelectedMap(id) {
+    console.log("map_id: ", id);
+    this.router.navigateByUrl("/map/" + id);
   }
 
   getMaps() {
