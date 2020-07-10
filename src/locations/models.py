@@ -8,7 +8,7 @@ from django.urls import reverse
 class Map(models.Model):
 	id  			=models.UUIDField(primary_key=True)
 	added_by		=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	# map request json properties:
+	# add-map request json properties:
 	mapName		 	=models.TextField(default="") # map name
 	area 		 	=models.TextField(default="") # study area name
 	shapeFilePath	=models.TextField(default="") # study area shape file path
@@ -22,13 +22,13 @@ class Map(models.Model):
 
    
 class Source(models.Model):
-	map_id		=models.ForeignKey(Map, on_delete=models.CASCADE)
 	added_by	=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 	# source feature request json properties
+	map_id		=models.ForeignKey(Map, on_delete=models.CASCADE)
 	lat			=models.FloatField()
 	lng			=models.FloatField()
 	sourceType	=models.TextField()
-	intensity	=models.IntegerField()
+	intensity	=models.FloatField()
 	dispersion	=models.FloatField()
 	name		=models.TextField()
 
