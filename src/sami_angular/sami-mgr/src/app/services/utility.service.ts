@@ -104,7 +104,7 @@ export class UtilityService {
 
   createMarker(feature) {
     let marker = L.circleMarker(
-      { lng: feature.Longitude, lat: feature.Latitude },
+      { lng: feature.lng, lat: feature.lat },
       {
         radius: 6,
         fillColor: "yellow",
@@ -118,13 +118,12 @@ export class UtilityService {
 
     marker.bindTooltip(
       "Intensity: " +
-        feature.Intensity +
+        feature.intensity +
         "<br>Dispersion: " +
-        feature.Dispersion +
+        feature.dispersion +
         "<br>Name: " +
-        feature.Name
+        feature.name
     );
-    // '<br>Added By: ' + feature.Map); // unused map-source verification
     return marker;
   }
 }

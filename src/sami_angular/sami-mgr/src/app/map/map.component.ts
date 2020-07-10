@@ -11,17 +11,18 @@ import { MapService } from "../services/map.service";
   styleUrls: ["./map.component.scss"],
 })
 export class MapComponent {
-  showTable = false;
-  showChart = false;
-  showSettings = false;
   mapID;
+  showTools = false;
+  showSettings = false;
+  showSourceTools = false;
+  showChart = false;
 
   COLOR_INACTIVE = "rgba(255, 255, 255, 1)";
-  COLOR_ACTIVE = "rgba(0, 255, 0, 1)";
+  COLOR_ACTIVE = "rgba(25, 126, 192, 1)";
 
   addLocationButtonBackgroundColor = this.COLOR_INACTIVE;
 
-  addingLocation = false;
+  addingSource = false;
 
   constructor(
     private mapService: MapService,
@@ -39,9 +40,9 @@ export class MapComponent {
   }
 
   addFeature(): void {
-    this.addingLocation = !this.addingLocation;
-    this.mapService.setAddingLocation(this.addingLocation);
-    if (this.addingLocation) {
+    this.addingSource = !this.addingSource;
+    this.mapService.setaddingSource(this.addingSource);
+    if (this.addingSource) {
       this.addLocationButtonBackgroundColor = this.COLOR_ACTIVE;
       this.snackBar.open("Click the map to add a source!", "Close", {
         // duration: 2000,
@@ -53,6 +54,14 @@ export class MapComponent {
       this.addLocationButtonBackgroundColor = this.COLOR_INACTIVE;
       this.snackBar.dismiss();
     }
+  }
+
+  uploadSourceFile() {
+    console.log("map.component: source.csv file upload not yet implemented");
+  }
+
+  getButtonBackgroundColor(active: boolean) {
+    return active ? this.COLOR_ACTIVE : this.COLOR_INACTIVE;
   }
 
   back(): void {

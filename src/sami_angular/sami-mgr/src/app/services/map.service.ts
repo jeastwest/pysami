@@ -76,7 +76,7 @@ export class MapService {
   private houstonPoly;
   private nolaPoly;
 
-  private addingLocation = false;
+  private addingSource = false;
 
   constructor(
     private http: HttpClient,
@@ -108,7 +108,7 @@ export class MapService {
     });
 
     this.map.on("click", (event) => {
-      if (this.addingLocation) {
+      if (this.addingSource) {
         this.openAddLocationPanel(event);
       }
     });
@@ -209,9 +209,11 @@ export class MapService {
         this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
       );
       this.activeStudyArea.areaLayer.addTo(this.map);
-      this.getActiveMapSources(mapID);
-      this.updateHeatmaps(this.activeStudyArea);
-      this.buildHeatmapLayers(this.activeStudyArea);
+      this.getActiveMapSources(mapID).subscribe(() => {
+        this.updateHeatmaps(this.activeStudyArea); // updates numerical arrays of intensities
+        this.buildHeatmapLayers(this.activeStudyArea); // builds leaflet layer representations of numerical heatmaps
+        this.addLocationsToMap(this.activeStudyArea); // builds and adds leaflet markers for source locations
+      });
     } else {
       console.log(`mapID ${mapID} doesn't exist!`);
       console.log(`If you're getting this error from home.compnent`);
@@ -244,7 +246,7 @@ export class MapService {
         tap(async () => {
           let userMap = { ...newMap, studyArea: null };
           userMap.studyArea = await this.initializNewStudyArea(
-            this.houstonPoly
+            this.houstonPoly // using a default shape file here until file upload is implemented
           );
           this.studyAreas.push({ ...userMap });
         }),
@@ -336,7 +338,7 @@ export class MapService {
 
   addLocationsToMap(studyArea) {
     const sourceFeatureLayer = L.layerGroup();
-    for (const feature of studyArea.hazards) {
+    for (const feature of studyArea.features) {
       let marker = this.utilityService.createMarker(feature);
       marker.addTo(sourceFeatureLayer);
       feature.marker = marker;
@@ -379,8 +381,8 @@ export class MapService {
     if (sourceFeatures.length > 0) {
       for (let j = 0; j < sourceFeatures.length; j++) {
         const hazardPoint = {
-          lat: sourceFeatures[j].Latitude,
-          lng: sourceFeatures[j].Longitude,
+          lat: sourceFeatures[j].lat,
+          lng: sourceFeatures[j].lng,
         };
         for (let i = 0; i < studyArea.cellsWithinStudyArea.length; i++) {
           const cellCenter = studyArea.cellsWithinStudyArea[i].center;
@@ -392,7 +394,7 @@ export class MapService {
             )
           ) {
             heatmap_base.intensity[i] =
-              heatmap_base.intensity[i] + parseInt(sourceFeatures[j].Intensity);
+              heatmap_base.intensity[i] + parseInt(sourceFeatures[j].intensity);
             if (heatmap_base.intensity[i] > heatmap_base.max_intensity) {
               heatmap_base.max_intensity = heatmap_base.intensity[i];
             }
@@ -409,10 +411,11 @@ export class MapService {
     for (let i = 0; i < studyCells.length; i++) {
       for (let j = 0; j < sourceFeatures.length; j++) {
         const hazard = sourceFeatures[j];
-        const dispersionFactor = this.DISPERSION_EXP / hazard.Dispersion;
+        const dispersionFactor = this.DISPERSION_EXP / hazard.dispersion;
+
         const distance = turf.distance(
           [studyCells[i].center[0], studyCells[i].center[1]],
-          [hazard.Longitude, hazard.Latitude],
+          [hazard.lng, hazard.lat],
           this.COORD_OPTIONS
         );
         const dispersedIntensity =
@@ -426,15 +429,15 @@ export class MapService {
     for (let i = 0; i < studyCells.length; i++) {
       for (let j = 0; j < sourceFeatures.length; j++) {
         const hazard = sourceFeatures[j];
-        const dispersionFactor = this.DISPERSION_LIN / hazard.Dispersion;
+        const dispersionFactor = this.DISPERSION_LIN / hazard.dispersion;
         heatmap_lin.intensity[i] += Math.max(
           0,
-          hazard.Intensity *
+          hazard.intensity *
             (1 -
               dispersionFactor *
                 turf.distance(
-                  studyCells[i].center,
-                  [hazard.Longitude, hazard.Latitude],
+                  [studyCells[i].center[0], studyCells[i].center[1]],
+                  [hazard.lng, hazard.lat],
                   this.COORD_OPTIONS
                 ))
         );
@@ -547,8 +550,8 @@ export class MapService {
     return this.absGradientThreshold;
   }
 
-  setAddingLocation(addingLocation) {
-    this.addingLocation = addingLocation;
+  setaddingSource(addingSource) {
+    this.addingSource = addingSource;
   }
 
   openAddLocationPanel(event) {

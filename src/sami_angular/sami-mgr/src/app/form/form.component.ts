@@ -42,8 +42,16 @@ export class FormComponent {
           lat: this.sourceForm.get("lat").value,
           lng: this.sourceForm.get("lng").value,
         })
-        .subscribe((result) => {
-          console.log(result);
+        .subscribe((response) => {
+          this.locationMarker.closePopup();
+          this.locationMarker.unbindPopup();
+          let tooltipText = `
+          <p>Name: ${response.name}</p>
+          <p>Source Type: ${response.sourceType}</p>
+          <p>Intensity: ${response.intensity}</p>
+          <p>Dispersion: ${response.dispersion}</p>
+          `;
+          this.locationMarker.bindTooltip(tooltipText).openTooltip();
         });
     } else {
       // this needs some error messaging
