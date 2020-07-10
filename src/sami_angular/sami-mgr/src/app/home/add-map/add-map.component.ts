@@ -22,8 +22,8 @@ export class AddMapComponent implements OnInit {
     this.mapForm = this.fb.group({
       mapName: [null, Validators.required],
       area: [null, Validators.required],
-      shapefileName: [null, Validators.required],
-      featuresfileName: [null, Validators.required],
+      shapeFilePath: [null, Validators.required],
+      featureFilePath: [null, Validators.required],
     });
   }
 
@@ -32,13 +32,12 @@ export class AddMapComponent implements OnInit {
       .createMap(
         this.mapForm.get("mapName").value,
         this.mapForm.get("area").value,
-        this.mapForm.get("shapefileName").value,
-        this.mapForm.get("featuresfileName").value
+        this.mapForm.get("shapeFilePath").value,
+        this.mapForm.get("featureFilePath").value
       )
       .subscribe((response) => {
-        console.log(response);
         // need to do error checking here
-        this.router.navigateByUrl(`map/:${response.pk}`);
+        this.router.navigateByUrl(`map/:${response.id}`);
       });
   }
 }

@@ -190,11 +190,11 @@ export class MapService {
 
   activateMap(mapID) {
     let userMap = this.studyAreas.find((a) => {
-      return a.pk === mapID;
+      return a.id === mapID;
     });
     if (!userMap) {
       userMap = this.maps.find((m) => {
-        return m.pk === mapID;
+        return m.id === mapID;
       });
       if (userMap) {
         userMap.studyArea = this.initializNewStudyArea(this.houstonPoly);
@@ -221,10 +221,10 @@ export class MapService {
   }
 
   createMap(
-    name: string,
+    mapName: string,
     area: string,
-    shapeFile: string,
-    featureList: string
+    shapeFilePath: string,
+    featureFilePath: string
   ): Observable<any> {
     const options = {
       headers: new HttpHeaders({
@@ -232,8 +232,12 @@ export class MapService {
         "Content-Type": "application/json",
       }),
     };
-    // const newMap = { name, area, shapeFile, featureList };
-    let newMap = { Name: name, City: area, Study_Area: shapeFile };
+    const newMap = {
+      mapName,
+      area,
+      shapeFilePath,
+      featureFilePath,
+    };
     return this.http
       .post<any>(environment.apiUrl + "api/maps/", newMap, options)
       .pipe(
@@ -245,7 +249,7 @@ export class MapService {
           this.studyAreas.push({ ...userMap });
         }),
         catchError((err) => {
-          return of({ error: "failed to add map" });
+          return of({ error: "failed to add map: ", err });
         })
       );
   }
@@ -306,14 +310,8 @@ export class MapService {
     return studyArea;
   }
 
-  getActiveMapMeta() {
-    console.log(this.activeMap);
-    return {
-      mapName: this.activeMap.name,
-      area: this.activeMap.area,
-      shapeFilePath: this.activeMap.shapeFile,
-      featuresFilePath: this.activeMap.featuresFilePath,
-    };
+  getActiveMap() {
+    return this.activeMap;
   }
 
   getActiveMapSources(mapID: string): Observable<any> {
@@ -568,6 +566,7 @@ export class MapService {
     );
     const component = factory.create(this.injector);
     component.instance.locationMarker = marker;
+    component.instance.map_id = this.activeMap.id;
     component.changeDetectorRef.detectChanges();
 
     return component.location.nativeElement;

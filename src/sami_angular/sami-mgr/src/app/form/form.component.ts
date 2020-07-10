@@ -11,6 +11,7 @@ import { UploaderService } from "../services/uploader.service";
 export class FormComponent {
   sourceForm: FormGroup;
 
+  map_id;
   locationMarker;
 
   constructor(
@@ -23,7 +24,7 @@ export class FormComponent {
       name: [null, Validators.required],
       sourceType: [null, Validators.required],
       intensity: [null, Validators.required],
-      distance: [null, Validators.required],
+      dispersion: [null, Validators.required],
       lat: [this.locationMarker._latlng.lat, Validators.required],
       lng: [this.locationMarker._latlng.lng, Validators.required],
     });
@@ -33,10 +34,11 @@ export class FormComponent {
     if (this.sourceForm.valid) {
       this.uploaderService
         .addSource({
+          map_id: this.map_id,
           name: this.sourceForm.get("name").value,
           sourceType: this.sourceForm.get("sourceType").value,
           intensity: this.sourceForm.get("intensity").value,
-          distance: this.sourceForm.get("distance").value,
+          dispersion: this.sourceForm.get("dispersion").value,
           lat: this.sourceForm.get("lat").value,
           lng: this.sourceForm.get("lng").value,
         })

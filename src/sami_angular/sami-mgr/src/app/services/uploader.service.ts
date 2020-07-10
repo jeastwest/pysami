@@ -31,7 +31,7 @@ export class UploaderService {
           console.log("response from /sources " + response);
         }),
         catchError((err) => {
-          return of({ error: "failed to add new source!" });
+          return of({ error: "failed to add new source! ", err });
         })
       );
   }

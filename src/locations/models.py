@@ -7,28 +7,30 @@ from django.urls import reverse
 # Create your models here.
 class Map(models.Model):
 	id  			=models.UUIDField(primary_key=True)
-	Added_by		=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	mapName		 	=models.TextField(default="")
-	area 		 	=models.TextField(default="")
-	shapeFile		=models.TextField(default="")
-	shapeFileData	=models.TextField(default="") 
-	featuresFile 	=models.TextField(default="")
-	featuresFileData=models.TextField(default="")
-	studyArea		=models.TextField(default="")
+	added_by		=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	# map request json properties:
+	mapName		 	=models.TextField(default="") # map name
+	area 		 	=models.TextField(default="") # study area name
+	shapeFilePath	=models.TextField(default="") # study area shape file path
+	shapeFileData	=models.TextField(default="") # placeholder for future data
+	featureFilePath =models.TextField(default="") # features.csv file path
+	featureFileData =models.TextField(default="") # placeholder for future data
+	studyArea		=models.TextField(default="") # placeholder for future data
 
 	def __str__(self):
 		return f'{self.Name}'
 
    
 class Source(models.Model):
-	Map			=models.ForeignKey(Map, on_delete=models.CASCADE)
-	Added_by	=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	Latitude	=models.FloatField()
-	Longitude	=models.FloatField()
-	Description	=models.TextField()
-	Intensity	=models.IntegerField()
-	Dispersion	=models.FloatField()
-	Name		=models.TextField()
+	map_id		=models.ForeignKey(Map, on_delete=models.CASCADE)
+	added_by	=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	# source feature request json properties
+	lat			=models.FloatField()
+	lng			=models.FloatField()
+	sourceType	=models.TextField()
+	intensity	=models.IntegerField()
+	dispersion	=models.FloatField()
+	name		=models.TextField()
 
 	def __str__(self):
 		return f'{self.Name}'

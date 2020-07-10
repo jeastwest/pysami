@@ -14,17 +14,16 @@ export class SettingsComponent implements OnInit {
   mapName;
   area;
   shapeFilePath;
-  featuresFilePath;
+  featureFilePath;
 
   constructor(private mapService: MapService, private fb: FormBuilder) {}
 
   ngOnInit() {
-    const mapMetaData = this.mapService.getActiveMapMeta();
-    console.log(mapMetaData);
-    this.mapName = mapMetaData.mapName;
-    this.area = mapMetaData.area;
-    this.shapeFilePath = mapMetaData.shapeFilePath;
-    this.featuresFilePath = mapMetaData.featuresFilePath;
+    const map = this.mapService.getActiveMap();
+    this.mapName = map.mapName;
+    this.area = map.area;
+    this.shapeFilePath = map.shapeFilePath;
+    this.featureFilePath = map.featureFilePath;
     this.gradientForm = this.fb.group({
       gradientType: new FormControl(this.getGradientType(), null),
       absThreshold: new FormControl(this.mapService.getAbsThreshold(), null),

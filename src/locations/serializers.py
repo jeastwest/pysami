@@ -8,12 +8,10 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['username', 'is_active', 'date_joined']
 
-
 class PermissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Permission
         fields = ['name', 'content_type', 'codename']
-
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,9 +21,14 @@ class GroupSerializer(serializers.ModelSerializer):
 class MapSerializer(serializers.ModelSerializer):
     class Meta:
         model = Map
-        fields = ['id', 'Added_by', 'MapName', 'area','shapeFile', 'shapeFileData','featuresFile','featuresFileData','studyArea']
+        fields = ['id', 'mapName', 'area','shapeFilePath', 'shapeFileData','featureFilePath','featureFileData','studyArea']
+
+class NewMapSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Map
+        fields = ['mapName', 'area','shapeFilePath', 'shapeFileData','featureFilePath','featureFileData','studyArea']
 
 class SourceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Source
-        fields = ['Map', 'Latitude', 'Longitude', 'Description', 'Intensity', 'Dispersion', 'Name']
+        fields = ['map_id', 'lat', 'lng', 'sourceType', 'intensity', 'dispersion', 'name']

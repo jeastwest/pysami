@@ -14,7 +14,7 @@ export class MapComponent {
   showTable = false;
   showChart = false;
   showSettings = false;
-  mapID: number;
+  mapID;
 
   COLOR_INACTIVE = "rgba(255, 255, 255, 1)";
   COLOR_ACTIVE = "rgba(0, 255, 0, 1)";
@@ -31,7 +31,7 @@ export class MapComponent {
   ) {}
 
   ngOnInit(): void {
-    this.mapID = +this.route.snapshot.paramMap.get("id");
+    this.mapID = this.route.snapshot.paramMap.get("id");
     if (this.mapID) {
       this.mapService.initMap();
       this.mapService.activateMap(this.mapID);

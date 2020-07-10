@@ -71,7 +71,6 @@ export class AuthService {
         }),
         catchError((err) => {
           // need better error messaging
-          console.log(err);
           return of({ error: "falied to login user!" });
         })
       );
@@ -97,7 +96,7 @@ export class AuthService {
     };
     return this.http.get(environment.apiUrl + "auth/users/me/", options).pipe(
       tap((user) => {
-        this.currentUser = user["username"];
+        this.currentUser = user;
       }),
       catchError((err) => {
         return of({ error: "failed to retrieve user!" });
@@ -106,7 +105,11 @@ export class AuthService {
   }
 
   getUsername(): string {
-    return this.currentUser;
+    let username = "";
+    if (this.currentUser) {
+      username = this.currentUser["username"];
+    }
+    return username;
   }
 
   setToken(token, rToken) {

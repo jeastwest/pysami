@@ -3,16 +3,16 @@
     <div class="map-item">
       <mat-card>
         <mat-card-content>
-          <h1>{{ map.Name }}</h1>
-          <p>{{ map.City }}</p>
-          <p>{{ map.shapeFile }}</p>
-          <p>{{ map.featureFile }}</p>
+          <h1>{{ map.mapName }}</h1>
+          <p>{{ map.area }}</p>
+          <p>{{ map.shapeFilePath }}</p>
+          <p>{{ map.featureFilePath }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button (click)="gotoSelectedMap(map.pk)">
+          <button mat-raised-button (click)="gotoSelectedMap(map.id)">
             View map
           </button>
-          <button mat-raised-button (click)="deleteMap(map.pk)">
+          <button mat-raised-button (click)="deleteMap(map.id)">
             Delete map
           </button>
         </mat-card-actions>
