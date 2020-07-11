@@ -37,7 +37,7 @@ export class AddMapComponent implements OnInit {
       )
       .subscribe((response) => {
         // need to do error checking here
-        this.router.navigateByUrl(`map/:${response.id}`);
+        this.router.navigateByUrl(`/map/${response.id}`);
       });
   }
 }

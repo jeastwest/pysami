@@ -46,6 +46,7 @@ def maps(request):
             user = request.user
             map = serializer.save(id=id, added_by=user)
             map.save()
+            serializer = MapSerializer(map)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

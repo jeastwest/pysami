@@ -65,6 +65,6 @@ export class MapComponent {
   }
 
   back(): void {
-    this.router.navigateByUrl("home");
+    this.router.navigateByUrl("/home");
   }
 }

@@ -202,6 +202,16 @@ export class MapService {
       }
     }
 
+    /* 
+    
+    Trying to figure out why a map.comnponent instance is created when the home.component is 
+    
+    */
+    console.log("mapID: ", mapID);
+    console.log("userMap: ", userMap);
+    console.log("studyAreas: ", this.studyAreas);
+    console.log("maps: ", this.maps);
+
     if (userMap) {
       this.activeMap = userMap;
       this.activeStudyArea = this.activeMap.studyArea;
@@ -243,12 +253,13 @@ export class MapService {
     return this.http
       .post<any>(environment.apiUrl + "api/maps/", newMap, options)
       .pipe(
-        tap(async () => {
-          let userMap = { ...newMap, studyArea: null };
-          userMap.studyArea = await this.initializNewStudyArea(
+        tap((response) => {
+          let userMap = { ...response };
+          userMap.studyArea = this.initializNewStudyArea(
             this.houstonPoly // using a default shape file here until file upload is implemented
           );
           this.studyAreas.push({ ...userMap });
+          console.log(this.studyAreas);
         }),
         catchError((err) => {
           return of({ error: "failed to add map: ", err });
