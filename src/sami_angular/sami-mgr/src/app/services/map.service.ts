@@ -26,6 +26,7 @@ export class MapService {
   sources: Source[];
   map_id: string;
   layerControls;
+  sourceLayer = L.layerGroup();
 
   appVersion = "0.5.0";
 
@@ -61,17 +62,6 @@ export class MapService {
 
   activeStudyArea = null; // this object represents a study area and contains all its data
   studyAreas = [];
-
-  private defaultMap = {
-    mapID: 0,
-    mapName: "map-name",
-    area: "city-name",
-    shapeFile: "//path/to/shapefile.shp",
-    shapeFileData: {},
-    featuresFile: "//path/to/featurefile.csv",
-    featuresFileData: {},
-    studyArea: {},
-  };
 
   private houstonPoly;
   private nolaPoly;
@@ -202,16 +192,6 @@ export class MapService {
       }
     }
 
-    /* 
-    
-    Trying to figure out why a map.comnponent instance is created when the home.component is 
-    
-    */
-    console.log("mapID: ", mapID);
-    console.log("userMap: ", userMap);
-    console.log("studyAreas: ", this.studyAreas);
-    console.log("maps: ", this.maps);
-
     if (userMap) {
       this.activeMap = userMap;
       this.activeStudyArea = this.activeMap.studyArea;
@@ -224,11 +204,6 @@ export class MapService {
         this.buildHeatmapLayers(this.activeStudyArea); // builds leaflet layer representations of numerical heatmaps
         this.addLocationsToMap(this.activeStudyArea); // builds and adds leaflet markers for source locations
       });
-    } else {
-      console.log(`mapID ${mapID} doesn't exist!
-      If you're getting this error from home.compnent
-      I have no idea why, that component shouldn't ever
-      call mapService.activateMap()!!`);
     }
   }
 
@@ -311,8 +286,12 @@ export class MapService {
     studyArea.features = []; // studyArea will handle its source features
     studyArea.heatmaps = {}; // studyArea will handle its heatmaps - a 'heatmap' is an array of values
     studyArea.heatmaps.heatmap_base = null; // heatmap_base includes min and max intensity values in addition to array
-    studyArea.heatmaps.heatmap_exp = null; // heatmap_exp and heatmap_lin DO NOT include min and max values as they are same as heatmap_base
-    studyArea.heatmaps.heatmap_lin = null;
+    studyArea.heatmaps.heatmap_exp = {}; // heatmap_exp and heatmap_lin DO NOT include min and max values as they are same as heatmap_base
+    studyArea.heatmaps.heatmap_exp.intensity = [];
+    studyArea.heatmaps.heatmap_exp.heatmapLayer = null;
+    studyArea.heatmaps.heatmap_lin = {};
+    studyArea.heatmaps.heatmap_lin.intensity = [];
+    studyArea.heatmaps.heatmap_lin.heatmapLayer = null;
 
     // leaflet layer for studyArea polygon
     studyArea.areaLayer = L.geoJSON(shapeFile, {
@@ -348,18 +327,17 @@ export class MapService {
   }
 
   addLocationsToMap(studyArea) {
-    const sourceFeatureLayer = L.layerGroup();
+    if (this.sourceLayer) {
+      this.updateLayerControls([{ "Source Features": this.sourceLayer }], true);
+      this.sourceLayer.remove();
+    }
     for (const feature of studyArea.features) {
       let marker = this.utilityService.createMarker(feature);
-      marker.addTo(sourceFeatureLayer);
+      marker.addTo(this.sourceLayer);
       feature.marker = marker;
     }
-    sourceFeatureLayer.addTo(this.map);
-    // updateSourcesTable(studyArea.hazards);
-    this.updateLayerControls(
-      [{ "Source Features": sourceFeatureLayer }],
-      false
-    );
+    this.sourceLayer.addTo(this.map);
+    this.updateLayerControls([{ "Source Features": this.sourceLayer }], false);
   }
 
   // generates the heatmaps; an array of intensities, used to generate layers/views
@@ -376,8 +354,8 @@ export class MapService {
       max_intensity: Number.MIN_VALUE,
       min_intensity: Number.MAX_VALUE,
     };
-    const heatmap_exp = { intensity: [] };
-    const heatmap_lin = { intensity: [] };
+    const heatmap_exp = studyArea.heatmaps.heatmap_exp;
+    const heatmap_lin = studyArea.heatmaps.heatmap_lin;
 
     const studyCells = studyArea.cellsWithinStudyArea;
 
@@ -569,18 +547,26 @@ export class MapService {
       })
       .openPopup();
   }
-  private createCustomPopup(marker) {
+  createCustomPopup(marker) {
     const factory = this.componentFactoryResolver.resolveComponentFactory(
       FormComponent
     );
     const component = factory.create(this.injector);
     component.instance.locationMarker = marker;
     component.instance.map_id = this.activeMap.id;
+    component.instance.sourceAdded.subscribe(() =>
+      this.getActiveMapSources(this.activeMap.id).subscribe(() => {
+        this.updateHeatmaps(this.activeStudyArea);
+        this.buildHeatmapLayers(this.activeStudyArea);
+        this.addLocationsToMap(this.activeStudyArea);
+      })
+    );
     component.changeDetectorRef.detectChanges();
 
     return component.location.nativeElement;
   }
 
+  /* Utility functions ---------------------------------------- */
   calculateCellColor(intensity, max_intensity, gradientType) {
     let colorIntensity = 0;
     switch (gradientType) {
@@ -608,6 +594,7 @@ export class MapService {
   setGradientType(gradient) {
     this.gradientType = gradient;
     this.buildHeatmapLayers(this.activeStudyArea);
+    this.addLocationsToMap(this.activeStudyArea);
   }
 
   getGradientType() {
@@ -621,6 +608,7 @@ export class MapService {
   setAbsThreshold(threshold) {
     this.absGradientThreshold = threshold;
     this.buildHeatmapLayers(this.activeStudyArea);
+    this.addLocationsToMap(this.activeStudyArea);
   }
 
   getAbsThreshold() {

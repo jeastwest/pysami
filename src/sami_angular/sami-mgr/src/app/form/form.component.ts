@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Output, EventEmitter } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 import { UploaderService } from "../services/uploader.service";
@@ -10,6 +10,9 @@ import { UploaderService } from "../services/uploader.service";
 })
 export class FormComponent {
   sourceForm: FormGroup;
+  sourceAdded = new EventEmitter();
+
+  emitterTest = 0;
 
   map_id;
   locationMarker;
@@ -44,14 +47,8 @@ export class FormComponent {
         })
         .subscribe((response) => {
           this.locationMarker.closePopup();
-          this.locationMarker.unbindPopup();
-          let tooltipText = `
-          <p>Name: ${response.name}</p>
-          <p>Source Type: ${response.sourceType}</p>
-          <p>Intensity: ${response.intensity}</p>
-          <p>Dispersion: ${response.dispersion}</p>
-          `;
-          this.locationMarker.bindTooltip(tooltipText).openTooltip();
+          this.locationMarker.remove();
+          this.sourceAdded.emit();
         });
     } else {
       // this needs some error messaging

@@ -22,8 +22,7 @@ export class HomeComponent {
   }
 
   gotoSelectedMap(id) {
-    console.log("map_id: ", id);
-    this.router.navigateByUrl("/map/" + id);
+    this.router.navigateByUrl(`/map/${id}`);
   }
 
   getMaps() {
