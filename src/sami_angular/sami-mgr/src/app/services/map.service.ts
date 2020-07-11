@@ -26,7 +26,7 @@ export class MapService {
   sources: Source[];
   map_id: string;
   layerControls;
-  sourceLayer = L.layerGroup();
+  sourceLayer;
 
   appVersion = "0.5.0";
 
@@ -150,10 +150,12 @@ export class MapService {
       })
       .addTo(this.map);
 
-    var legend = L.control({ position: "bottomright" });
+    this.sourceLayer = L.layerGroup();
+
+    const legend = L.control({ position: "bottomright" });
 
     legend.onAdd = (map) => {
-      var div = L.DomUtil.create("div", "legend-info legend"),
+      let div = L.DomUtil.create("div", "legend-info legend"),
         grades = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
         labels = ["<h4>% Maximum</h4>"],
         from,
