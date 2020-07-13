@@ -118,16 +118,13 @@ These are the optional flag definitions:
 
 
 ### Screenshots
-
-![Screen Shot 2020-07-10 at 3 40 41 PM](https://user-images.githubusercontent.com/54405058/87201537-66112680-c2c4-11ea-9e77-6f39a7d54659.png)
-
-![Screen Shot 2020-07-10 at 2 29 14 PM](https://user-images.githubusercontent.com/54405058/87191564-4d037800-c2ba-11ea-97f5-98473c3c552b.png)
-
 ![Screen Shot 2020-07-10 at 2 29 44 PM](https://user-images.githubusercontent.com/54405058/87201237-cbb0e300-c2c3-11ea-8db1-bcc8d153f47e.png)
+![Screen Shot 2020-07-10 at 2 29 14 PM](https://user-images.githubusercontent.com/54405058/87191564-4d037800-c2ba-11ea-97f5-98473c3c552b.png)
+![Screen Shot 2020-07-10 at 3 40 41 PM](https://user-images.githubusercontent.com/54405058/87201537-66112680-c2c4-11ea-9e77-6f39a7d54659.png)
 
 
 ### Expected Input File Formats
-## Shape File
+#### Shape File
 SAMI uses .json files to define a study area shape. They follow the structure of a .geojson file:
 (you should be able to change the file extension of a .geojson to .json and add the name field to the beginning of the file)
 ```json
@@ -155,7 +152,7 @@ SAMI uses .json files to define a study area shape. They follow the structure of
   }
 }
  ```
-## Features File
+#### Features File
 SAMI uses .csv files to import source feature data. Any invalid sources are ignored, including the file header.
 The expected order of values is Latitude, Longitude, Description, Dispersion, Intensity, Name.
 ```csv
