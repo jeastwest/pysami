@@ -116,18 +116,24 @@ export class UploadComponent implements OnInit {
     const map = this.mapService.getActiveMap();
     let submitted = 0;
     let completed = 0;
-    while (submitted < sources.length) {
-      this.uploaderService.addSource(sources[submitted]).subscribe(() => {
-        completed++;
-        if (completed >= sources.length) {
-          this.mapService.getActiveMapSources(map.id).subscribe(() => {
-            this.mapService.updateHeatmaps(map.studyArea);
-            this.mapService.buildHeatmapLayers(map.studyArea);
-            this.mapService.addLocationsToMap(map.studyArea);
-          });
-        }
-      });
-      submitted++;
-    }
+
+    const requestTimer = setInterval(() => {
+      if (submitted < sources.length) {
+        this.uploaderService.addSource(sources[submitted]).subscribe(() => {
+          completed++;
+          if (completed >= sources.length) {
+            this.mapService.getActiveMapSources(map.id).subscribe(() => {
+              this.mapService.updateHeatmaps(map.studyArea);
+              this.mapService.buildHeatmapLayers(map.studyArea);
+              this.mapService.addLocationsToMap(map.studyArea);
+            });
+          }
+        });
+        submitted++;
+      }
+      if (submitted >= sources.length) {
+        clearInterval(requestTimer);
+      }
+    }, 33);
   }
 }
