@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-content>
+    <h4>Upload a source feature file</h4>
+    <input
+      type="file"
+      accept=".csv"
+      name="files[]"
+      (change)="updateFileList($event)"
+    /><button mat-raised-button type="button" (click)="uploadSourceFile()">
+      Upload Source File
+    </button>
+  </mat-card-content>
+</mat-card>

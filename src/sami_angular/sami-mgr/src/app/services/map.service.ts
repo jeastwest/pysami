@@ -236,7 +236,6 @@ export class MapService {
             this.houstonPoly // using a default shape file here until file upload is implemented
           );
           this.studyAreas.push({ ...userMap });
-          console.log(this.studyAreas);
         }),
         catchError((err) => {
           return of({ error: "failed to add map: ", err });
@@ -308,6 +307,7 @@ export class MapService {
     return this.activeMap;
   }
 
+  // this function gets the sources data from the server for the activeStudyArea
   getActiveMapSources(mapID: string): Observable<any> {
     const options = {
       headers: new HttpHeaders({
@@ -326,6 +326,11 @@ export class MapService {
           return of({ error: "failed to retrieve table values!" });
         })
       );
+  }
+
+  // this function gets the sources data currently in memory for the activeStudyArea
+  getSources() {
+    return this.activeStudyArea.features;
   }
 
   addLocationsToMap(studyArea) {

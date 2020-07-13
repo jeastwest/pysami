@@ -17,19 +17,7 @@
         </button>
       </div>
       <ng-container *ngIf="showSourceTools">
-        <mat-card>
-          <mat-card-content>
-            <h4>source.csv file upload not yet implemented</h4>
-            <input type="file" fileType="csv" /><button
-              mat-raised-button
-              type="button"
-              (click)="uploadSourceFile()"
-            >
-              Upload Source File
-            </button>
-          </mat-card-content>
-        </mat-card>
-
+        <app-upload></app-upload>
         <app-table></app-table>
       </ng-container>
     </div>

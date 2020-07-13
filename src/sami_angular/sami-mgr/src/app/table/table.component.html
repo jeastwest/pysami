@@ -4,29 +4,29 @@
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" />
   </mat-form-field>
 
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="sourceData" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let source">{{ source.name }}</td>
+    </ng-container>
+
     <!-- Description Column -->
-    <ng-container matColumnDef="Description">
-      <th mat-header-cell *matHeaderCellDef>Description</th>
-      <td mat-cell *matCellDef="let hazard">{{ hazard.Description }}</td>
+    <ng-container matColumnDef="SourceType">
+      <th mat-header-cell *matHeaderCellDef>Source Type</th>
+      <td mat-cell *matCellDef="let source">{{ source.sourceType }}</td>
     </ng-container>
 
     <!-- Intensity Column -->
     <ng-container matColumnDef="Intensity">
       <th mat-header-cell *matHeaderCellDef>Intensity</th>
-      <td mat-cell *matCellDef="let hazard">{{ hazard.Intensity }}</td>
+      <td mat-cell *matCellDef="let source">{{ source.intensity }}</td>
     </ng-container>
 
     <!-- Dispersion Column -->
     <ng-container matColumnDef="Dispersion">
       <th mat-header-cell *matHeaderCellDef>Dispersion</th>
-      <td mat-cell *matCellDef="let hazard">{{ hazard.Dispersion }}</td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="Name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let hazard">{{ hazard.Name }}</td>
+      <td mat-cell *matCellDef="let source">{{ source.dispersion }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -3,17 +3,11 @@
   "name": "Houston",
   "properties": {
     "OID_": 0,
-    "Name": "Houston",
-    "FolderPath": "Houston.kmz",
     "SymbolID": 0,
     "AltMode": 0,
     "Base": 0.0,
     "Clamped": -1,
-    "Extruded": 0,
-    "Snippet": null,
-    "PopupInfo": null,
-    "Shape_Leng": 5.4763362315000004,
-    "Shape_Area": 0.38795047507199998
+    "Extruded": 0
   },
   "geometry": {
     "type": "Polygon",

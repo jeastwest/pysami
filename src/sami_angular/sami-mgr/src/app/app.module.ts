@@ -40,6 +40,7 @@ import { ChartComponent } from "./chart/chart.component";
 import { SettingsComponent } from "./settings/settings.component";
 import { NavigationComponent } from "./navigation/navigation.component";
 import { AddMapComponent } from "./home/add-map/add-map.component";
+import { UploadComponent } from './upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { AddMapComponent } from "./home/add-map/add-map.component";
     SettingsComponent,
     NavigationComponent,
     AddMapComponent,
+    UploadComponent,
   ],
   imports: [
     BrowserModule,

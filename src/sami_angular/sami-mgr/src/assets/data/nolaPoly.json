@@ -3,17 +3,11 @@
   "name": "New Orleans",
   "properties": {
     "OID_": 0,
-    "Name": "Placemark",
-    "FolderPath": "MyOrleans.kmz",
     "SymbolID": 0,
     "AltMode": 0,
     "Base": 0.0,
     "Clamped": -1,
-    "Extruded": 0,
-    "Snippet": null,
-    "PopupInfo": null,
-    "Shape_Leng": 2.4976916662200002,
-    "Shape_Area": 0.048778192341800003
+    "Extruded": 0
   },
   "geometry": {
     "type": "Polygon",

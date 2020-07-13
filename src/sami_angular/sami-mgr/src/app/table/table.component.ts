@@ -1,17 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-
-import { MatTableDataSource } from "@angular/material/table";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-
-import { Source } from "../models/sources.model";
-import { UtilityService } from "../services/utility.service";
-import { AuthService } from "../services/auth.service";
-
-import { MapComponent } from "../map/map.component";
-import { ActivatedRoute, Router } from "@angular/router";
-import { Location } from "@angular/common";
-
-let SOURCE_DATA: Source[];
+import { MapService } from "../services/map.service";
 
 @Component({
   selector: "app-table",
@@ -19,47 +7,17 @@ let SOURCE_DATA: Source[];
   templateUrl: "table.component.html",
 })
 export class TableComponent implements OnInit {
-  constructor(
-    private utilityService: UtilityService,
-    private http: HttpClient,
-    private auth: AuthService,
-    private mapComponent: MapComponent,
-    private router: Router,
-    private route: ActivatedRoute,
-    private location: Location
-  ) {}
-  dragPosition = { x: 0, y: 0 };
+  displayedColumns = ["Name", "SourceType", "Intensity", "Dispersion"];
 
-  changePosition() {
-    this.dragPosition = {
-      x: this.dragPosition.x + 50,
-      y: this.dragPosition.y + 50,
-    };
-  }
+  sourceData;
 
-  displayedColumns: string[] = [
-    "Description",
-    "Intensity",
-    "Dispersion",
-    "Name",
-  ];
-  public dataSource;
+  constructor(private mapService: MapService) {}
 
-  ngOnInit(): void {
-    const map_id = this.route.snapshot.paramMap.get("id");
-    console.log(map_id);
-    // this.utilityService.getSelectedMapSources(map_id).subscribe(
-    //   (response) => {
-    //     console.log(response)
-    //     SOURCE_DATA = [...response]
-    //     this.dataSource = new MatTableDataSource(SOURCE_DATA);
-    //     console.log(this.dataSource)
-    //   }
-    // )
+  ngOnInit() {
+    this.sourceData = this.mapService.getSources();
   }
 
   applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    console.log("table filtering not yet implemented");
   }
 }
