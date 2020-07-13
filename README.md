@@ -163,7 +163,7 @@ Latitude,Longitude,Description,Dispersion,Intensity,Name
 29.30106969,-96.09780622,WW Treatment Plant,2000,1000,CITY OF WHARTON WWTP 1
 ```
 
-### Screenshots
+## Screenshots
 <p align="center">
   <img src="https://user-images.githubusercontent.com/54405058/87201237-cbb0e300-c2c3-11ea-8db1-bcc8d153f47e.png"/>
   <img src="https://user-images.githubusercontent.com/54405058/87191564-4d037800-c2ba-11ea-97f5-98473c3c552b.png"/>
