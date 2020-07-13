@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UploaderService } from "../services/uploader.service";
+import { MapService } from "../services/map.service";
+import { stringify } from "querystring";
 
 @Component({
   selector: "app-upload",
@@ -11,7 +13,10 @@ export class UploadComponent implements OnInit {
   files: FileList;
   rejectedSources = [];
 
-  constructor(private uploaderService: UploaderService) {}
+  constructor(
+    private uploaderService: UploaderService,
+    private mapService: MapService
+  ) {}
 
   ngOnInit() {}
 
@@ -40,51 +45,89 @@ export class UploadComponent implements OnInit {
 
   readCSV(file) {
     const sources = [];
+    const map_id = this.mapService.getActiveMap().id;
 
     const lines = file.split("\n");
     for (const line in lines) {
-      const source = this.parseSource(lines[line]);
+      let source = this.parseSource(lines[line]);
       if (source) {
-        sources.push(source);
+        const s = { map_id: map_id, ...source };
+        sources.push(s);
       } else {
         this.rejectedSources.push({ invalidRecord: lines[line] });
       }
     }
     if (sources.length > 0) {
-      this.uploaderService.batchLoadSources(sources);
+      this.batchLoadSources(sources);
     }
     if (this.rejectedSources.length > 0) {
-      console.log("invalid records: ", this.rejectedSources);
+      // console.log("invalid records: ", this.rejectedSources);
     }
   }
 
   parseSource(line) {
-    const result = null;
     const source = line.split(",");
-    if (source.length === 4) {
-      const name = source[1];
-      if (typeof name !== "string") {
-        return result;
+    if (source.length === 6) {
+      const lat = parseFloat(source[0].trim());
+      if (!lat || typeof lat !== "number") {
+        return null;
       }
-      const sourceType = source[0];
+      const lng = parseFloat(source[1].trim());
+      if (!lng || typeof lng !== "number") {
+        return null;
+      }
+      let sourceType = source[2].trim();
       if (typeof sourceType !== "string") {
-        return result;
+        return null;
+      } else if (sourceType.length === 0) {
+        sourceType = "unknown";
       }
-      const intensity = parseInt(source[2]);
+      const intensity = parseInt(source[3].trim());
       if (!intensity || typeof intensity !== "number") {
-        return result;
+        return null;
       }
-      const dispersion = parseInt(source[3]);
+      const dispersion = parseInt(source[4].trim());
       if (!dispersion || typeof dispersion !== "number") {
-        return result;
+        return null;
+      }
+      let name = source[5].trim();
+      if (typeof name !== "string") {
+        return null;
+      } else if (name.length === 0) {
+        name = "unknown";
       }
       return {
-        name,
+        lat,
+        lng,
         sourceType,
         intensity,
         dispersion,
+        name,
       };
     }
-    return result;
+    return null;
+  }
+
+  // expects an array of source objects
+  // very crude batch loading function, no load control or throttling
+  // big files might break things
+  // tested with 200+ sources loading and updating the heatmaps in ~8sec.
+  batchLoadSources(sources) {
+    const map = this.mapService.getActiveMap();
+    let submitted = 0;
+    let completed = 0;
+    while (submitted < sources.length) {
+      this.uploaderService.addSource(sources[submitted]).subscribe(() => {
+        completed++;
+        if (completed >= sources.length) {
+          this.mapService.getActiveMapSources(map.id).subscribe(() => {
+            this.mapService.updateHeatmaps(map.studyArea);
+            this.mapService.buildHeatmapLayers(map.studyArea);
+            this.mapService.addLocationsToMap(map.studyArea);
+          });
+        }
+      });
+      submitted++;
+    }
   }
 }

@@ -303,6 +303,10 @@ export class MapService {
     return studyArea;
   }
 
+  getMapID() {
+    return this.map_id;
+  }
+
   getActiveMap() {
     return this.activeMap;
   }
