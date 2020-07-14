@@ -10,4 +10,7 @@
       Upload Source File
     </button>
   </mat-card-content>
+  <mat-card-content *ngIf="loadingSources">
+    {{ sourcesLoaded }} sources loaded.
+  </mat-card-content>
 </mat-card>

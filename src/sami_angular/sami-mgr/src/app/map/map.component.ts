@@ -11,7 +11,7 @@ import { MapService } from "../services/map.service";
   styleUrls: ["./map.component.scss"],
 })
 export class MapComponent {
-  mapID;
+  map_id;
   showTools = false;
   showSettings = false;
   showSourceTools = false;
@@ -32,10 +32,10 @@ export class MapComponent {
   ) {}
 
   ngOnInit(): void {
-    this.mapID = this.route.snapshot.paramMap.get("id");
-    if (this.mapID) {
+    this.map_id = this.route.snapshot.paramMap.get("id");
+    if (this.map_id) {
       this.mapService.initMap();
-      this.mapService.activateMap(this.mapID);
+      this.mapService.activateMap(this.map_id);
     }
   }
 

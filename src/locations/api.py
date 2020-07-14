@@ -37,6 +37,7 @@ def maps(request):
         serializer = MapSerializer(maps, many=True)
         return Response(serializer.data)
     elif request.method =='POST':
+        print(str(len(request.data)))
         serializer = NewMapSerializer(data=request.data)
         if serializer.is_valid():
             id = uuid.uuid4()
@@ -67,3 +68,24 @@ def sources(request, pk):
             source.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET', 'POST', 'PATCH'])
+def batch(request, pk):
+    """
+    API endpoint that returns all sources  or creates new source
+    """
+
+    if request.method =='POST':
+        return Response([{"message": "oh i don't know"}], status=status.HTTP_201_CREATED)
+    # if request.method =='POST':
+    #     serializer = SourceSerializer(data=request.data)
+    #     if serializer.is_valid():
+    #         user = request.user
+    #         source = serializer.save(added_by=user)
+    #         source.save()
+    #         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        
+    return Response([{"message": "oh i don't know either"}], status=status.HTTP_400_BAD_REQUEST)
+

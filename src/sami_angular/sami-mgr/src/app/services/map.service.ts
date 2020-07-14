@@ -180,35 +180,7 @@ export class MapService {
     legend.addTo(this.map);
   }
 
-  activateMap(mapID) {
-    let userMap = this.studyAreas.find((a) => {
-      return a.id === mapID;
-    });
-    if (!userMap) {
-      userMap = this.maps.find((m) => {
-        return m.id === mapID;
-      });
-      if (userMap) {
-        userMap.studyArea = this.initializNewStudyArea(this.houstonPoly);
-        this.studyAreas.push({ ...userMap });
-      }
-    }
-
-    if (userMap) {
-      this.activeMap = userMap;
-      this.activeStudyArea = this.activeMap.studyArea;
-      this.map.flyToBounds(
-        this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
-      );
-      this.activeStudyArea.areaLayer.addTo(this.map);
-      this.getActiveMapSources(mapID).subscribe(() => {
-        this.updateHeatmaps(this.activeStudyArea); // updates numerical arrays of intensities
-        this.buildHeatmapLayers(this.activeStudyArea); // builds leaflet layer representations of numerical heatmaps
-        this.addLocationsToMap(this.activeStudyArea); // builds and adds leaflet markers for source locations
-      });
-    }
-  }
-
+  // creates a SAMI map object
   createMap(
     mapName: string,
     area: string,
@@ -241,24 +213,6 @@ export class MapService {
           return of({ error: "failed to add map: ", err });
         })
       );
-  }
-
-  getUserMaps(): Observable<any> {
-    const options = {
-      headers: new HttpHeaders({
-        Authorization: "Bearer " + this.auth.getAuthToken(),
-        "Content-Type": "application/json",
-      }),
-    };
-    return this.http.get<any>(environment.apiUrl + "api/maps/", options).pipe(
-      timeout(5000),
-      tap((maps) => {
-        this.maps = [...maps];
-      }),
-      catchError((err) => {
-        return of({ error: "failed to retrieve maps!" });
-      })
-    );
   }
 
   initializNewStudyArea(shapeFile) {
@@ -303,15 +257,69 @@ export class MapService {
     return studyArea;
   }
 
-  getMapID() {
-    return this.map_id;
+  activateMap(mapID) {
+    let userMap = this.studyAreas.find((a) => {
+      return a.id === mapID;
+    });
+    if (!userMap) {
+      userMap = this.maps.find((m) => {
+        return m.id === mapID;
+      });
+      if (userMap) {
+        userMap.studyArea = this.initializNewStudyArea(this.houstonPoly);
+        this.studyAreas.push({ ...userMap });
+      }
+    }
+
+    if (userMap) {
+      this.activeMap = userMap;
+      this.activeStudyArea = this.activeMap.studyArea;
+      this.map.flyToBounds(
+        this.utilityService.turfBBoxToLeafletBounds(this.activeStudyArea.bbox)
+      );
+      this.activeStudyArea.areaLayer.addTo(this.map);
+      this.updateHeatmapLayers();
+    }
   }
 
   getActiveMap() {
     return this.activeMap;
   }
 
-  // this function gets the sources data from the server for the activeStudyArea
+  // http call to get user maps data
+  getUserMaps(): Observable<any> {
+    const options = {
+      headers: new HttpHeaders({
+        Authorization: "Bearer " + this.auth.getAuthToken(),
+        "Content-Type": "application/json",
+      }),
+    };
+    return this.http.get<any>(environment.apiUrl + "api/maps/", options).pipe(
+      timeout(5000),
+      tap((maps) => {
+        this.maps = [...maps];
+      }),
+      catchError((err) => {
+        return of({ error: "failed to retrieve maps!" });
+      })
+    );
+  }
+
+  // this function gets the sources data currently in memory for the activeStudyArea
+  // used by the table in the source tool panel
+  getSources() {
+    return this.activeStudyArea.features;
+  }
+
+  updateHeatmapLayers() {
+    this.getActiveMapSources(this.activeMap.id).subscribe(() => {
+      this.updateHeatmaps(this.activeStudyArea);
+      this.buildHeatmapLayers(this.activeStudyArea);
+      this.addLocationsToMap(this.activeStudyArea);
+    });
+  }
+
+  // http call to get source features data for map
   getActiveMapSources(mapID: string): Observable<any> {
     const options = {
       headers: new HttpHeaders({
@@ -330,25 +338,6 @@ export class MapService {
           return of({ error: "failed to retrieve table values!" });
         })
       );
-  }
-
-  // this function gets the sources data currently in memory for the activeStudyArea
-  getSources() {
-    return this.activeStudyArea.features;
-  }
-
-  addLocationsToMap(studyArea) {
-    if (this.sourceLayer) {
-      this.updateLayerControls([{ "Source Features": this.sourceLayer }], true);
-      this.sourceLayer.remove();
-    }
-    for (const feature of studyArea.features) {
-      let marker = this.utilityService.createMarker(feature);
-      marker.addTo(this.sourceLayer);
-      feature.marker = marker;
-    }
-    this.sourceLayer.addTo(this.map);
-    this.updateLayerControls([{ "Source Features": this.sourceLayer }], false);
   }
 
   // generates the heatmaps; an array of intensities, used to generate layers/views
@@ -504,7 +493,6 @@ export class MapService {
         intensity >
         heatmap_base.max_intensity * this.MIN_INTENSITY_THRESHOLD
       ) {
-        // const cellColor = this.getCellColor(intensity / max_intensity);
         const cellColor = this.calculateCellColor(
           intensity,
           heatmap_base.max_intensity,
@@ -536,6 +524,20 @@ export class MapService {
     );
   }
 
+  addLocationsToMap(studyArea) {
+    if (this.sourceLayer) {
+      this.updateLayerControls([{ "Source Features": this.sourceLayer }], true);
+      this.sourceLayer.remove();
+    }
+    for (const feature of studyArea.features) {
+      let marker = this.utilityService.createMarker(feature);
+      marker.addTo(this.sourceLayer);
+      feature.marker = marker;
+    }
+    this.sourceLayer.addTo(this.map);
+    this.updateLayerControls([{ "Source Features": this.sourceLayer }], false);
+  }
+
   updateLayerControls(layers, r) {
     const remove = r || false;
     for (let layer of layers) {
@@ -565,13 +567,9 @@ export class MapService {
     const component = factory.create(this.injector);
     component.instance.locationMarker = marker;
     component.instance.map_id = this.activeMap.id;
-    component.instance.sourceAdded.subscribe(() =>
-      this.getActiveMapSources(this.activeMap.id).subscribe(() => {
-        this.updateHeatmaps(this.activeStudyArea);
-        this.buildHeatmapLayers(this.activeStudyArea);
-        this.addLocationsToMap(this.activeStudyArea);
-      })
-    );
+    component.instance.sourceAdded.subscribe(() => {
+      this.updateHeatmapLayers();
+    });
     component.changeDetectorRef.detectChanges();
 
     return component.location.nativeElement;
@@ -628,10 +626,6 @@ export class MapService {
 
   setaddingSource(addingSource) {
     this.addingSource = addingSource;
-  }
-
-  getCellColor(intensity) {
-    return d3.interpolateReds(intensity);
   }
 
   // called by the constructor to pre-load shape files

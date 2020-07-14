@@ -1,31 +1,27 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { UploaderService } from "../services/uploader.service";
 import { MapService } from "../services/map.service";
-import { stringify } from "querystring";
 
 @Component({
   selector: "app-upload",
   templateUrl: "./upload.component.html",
   styleUrls: ["./upload.component.scss"],
 })
-export class UploadComponent implements OnInit {
-  numValsInRecord: number;
+export class UploadComponent {
   files: FileList;
-  rejectedSources = [];
+  sourcesLoaded = 0;
+  loadingSources = false;
 
   constructor(
     private uploaderService: UploaderService,
     private mapService: MapService
   ) {}
 
-  ngOnInit() {}
-
   updateFileList(event): void {
     this.files = event.target.files;
   }
 
   uploadSourceFile(): void {
-    this.rejectedSources = [];
     if (this.files.length === 0) {
       console.log("no files selected!");
       return;
@@ -36,7 +32,7 @@ export class UploadComponent implements OnInit {
         if (reader.result) {
           this.readCSV(reader.result);
         } else {
-          // error here?
+          // error messages here?
         }
       };
       reader.readAsText(this.files[f]);
@@ -45,23 +41,23 @@ export class UploadComponent implements OnInit {
 
   readCSV(file) {
     const sources = [];
+    const rejectedSources = [];
     const map_id = this.mapService.getActiveMap().id;
 
     const lines = file.split("\n");
     for (const line in lines) {
       let source = this.parseSource(lines[line]);
       if (source) {
-        const s = { map_id: map_id, ...source };
-        sources.push(s);
+        sources.push({ map_id: map_id, ...source });
       } else {
-        this.rejectedSources.push({ invalidRecord: lines[line] });
+        rejectedSources.push({ invalidSource: lines[line] });
       }
     }
     if (sources.length > 0) {
       this.batchLoadSources(sources);
     }
-    if (this.rejectedSources.length > 0) {
-      // console.log("invalid records: ", this.rejectedSources);
+    if (rejectedSources.length > 0) {
+      // console.log("invalid sources: ", rejectedSources);
     }
   }
 
@@ -113,20 +109,18 @@ export class UploadComponent implements OnInit {
   // big files might break things
   // tested with 200+ sources loading and updating the heatmaps in ~8sec.
   batchLoadSources(sources) {
+    this.loadingSources = true;
     const map = this.mapService.getActiveMap();
     let submitted = 0;
-    let completed = 0;
+    this.sourcesLoaded = 0;
 
     const requestTimer = setInterval(() => {
       if (submitted < sources.length) {
         this.uploaderService.addSource(sources[submitted]).subscribe(() => {
-          completed++;
-          if (completed >= sources.length) {
-            this.mapService.getActiveMapSources(map.id).subscribe(() => {
-              this.mapService.updateHeatmaps(map.studyArea);
-              this.mapService.buildHeatmapLayers(map.studyArea);
-              this.mapService.addLocationsToMap(map.studyArea);
-            });
+          this.sourcesLoaded++;
+          if (this.sourcesLoaded >= sources.length) {
+            this.mapService.updateHeatmapLayers();
+            this.loadingSources = false;
           }
         });
         submitted++;
@@ -134,6 +128,6 @@ export class UploadComponent implements OnInit {
       if (submitted >= sources.length) {
         clearInterval(requestTimer);
       }
-    }, 33);
+    }, 66);
   }
 }
